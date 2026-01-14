@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biffa Case Study - Louis Sheppard</title>
+    <link rel="stylesheet" href="https://use.typekit.net/lbw8rgr.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { 
+            font-family: "helvetica-neue-world", "neue-helvetica-world", sans-serif; 
+            font-weight: 400; 
+            color: #505050; 
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .title-large, .article-content h2 { 
+            font-family: "helvetica-neue-world", "neue-helvetica-world", sans-serif;
+            font-size: 28px; 
+            font-style: normal;
+            font-weight: 400; 
+            line-height: 35px; 
+            letter-spacing: -0.02em; 
+            color: #505050;
+        }
+
+        .border-custom-grey { border-color: #DEDEDE; }
+        .tight-padding { padding-top: 2px; }
+        .header-custom { padding-top: 2px; padding-bottom: 120px; } 
+        
+        .hero-buffer { padding-bottom: 60px; } 
+
+        .image-placeholder { 
+            background-color: #f3f3f3; 
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        /* Gallery Container Styles */
+        .gallery-container {
+            background-color: #f3f3f3;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: opacity 0.4s ease;
+            aspect-ratio: 16 / 9;
+        }
+
+        /* GRID LOGIC: No fixed height on mobile to allow square hero, fixed 16/9 on desktop */
+        .mosaic-hero {
+            display: grid;
+            width: 100%;
+        }
+
+        @media (min-width: 1024px) {
+            .mosaic-hero {
+                aspect-ratio: 16 / 9; 
+            }
+        }
+
+        .aspect-16-9 { aspect-ratio: 16 / 9; }
+        .aspect-square { aspect-ratio: 1 / 1; }
+
+        .article-content {
+            max-width: 680px; 
+            margin: 0 auto;
+        }
+
+        .article-content p, .caption-text {
+            font-size: 19px;
+            line-height: 1.6;
+            color: #505050;
+        }
+
+        .article-content p { margin-bottom: 32px; }
+
+        .article-content h2 {
+            margin-top: 40px; 
+            margin-bottom: 12px;
+        }
+
+        .article-content h3 {
+            font-size: 19px;
+            font-weight: 700;
+            color: #505050;
+            margin-top: 40px;
+            margin-bottom: 16px;
+        }
+
+        .article-content ul {
+            margin-bottom: 32px;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .article-content li {
+            font-size: 19px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            color: #505050;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .article-content li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 14px; 
+            width: 5px; 
+            height: 5px; 
+            background-color: #505050;
+            border-radius: 50%;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s cubic-bezier(0.21, 0.6, 0.35, 1), 
+                        transform 0.8s cubic-bezier(0.21, 0.6, 0.35, 1);
+        }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .back-link {
+            font-size: 19px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <div class="pt-[12px] reveal">
+        <header class="border-t border-b border-custom-grey header-custom">
+            <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-start">
+                <div class="mb-6 md:mb-0">
+                    <a href="home.html" class="hover:opacity-50 transition-opacity">
+                        <h1 class="title-large">Louis Sheppard</h1>
+                        <p class="title-large">Profile 2026</p>
+                    </a>
+                </div>
+                <nav class="flex flex-wrap gap-x-6 gap-y-2 text-19px md:pt-2">
+                    <a href="home.html" class="hover:opacity-50 transition-opacity underline decoration-1 underline-offset-4">Work</a>
+                    <a href="#" class="hover:opacity-50 transition-opacity underline decoration-1 underline-offset-4">About</a>
+                    <a href="#" class="hover:opacity-50 transition-opacity underline decoration-1 underline-offset-4">Contact</a>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+<main class="pb-32">
+        <section class="tight-padding">
+            <div class="max-w-7xl mx-auto px-8 hero-buffer">
+                
+                <div class="mt-2 mb-10 reveal">
+                    <a href="home.html" class="back-link underline underline-offset-4 hover:opacity-50 transition-opacity">Back home</a>
+                </div>
+
+                <div class="mb-12 reveal">
+                    <h1 class="title-large max-w-[842px]">Biffa: A complete transformation of service delivery and customer experience for businesses of all sizes across the UK.</h1>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-[20px] mosaic-hero">
+                    
+                    <div class="lg:col-span-7 image-placeholder reveal aspect-square lg:aspect-auto">
+                        <img src="assets/b-assets/bhero-01.png" alt="Project" class="lg:hidden">
+                        <img src="assets/b-assets/bhero-01.png" alt="Projecty" class="hidden lg:block">
+                    </div>
+
+                    <div class="lg:col-span-5 grid grid-cols-2 lg:grid-cols-1 lg:grid-rows-2 gap-[20px]">
+                        <div class="image-placeholder reveal reveal-stagger aspect-video lg:aspect-auto">
+                            <img src="assets/b-assets/bhero-02.png" alt="Project">
+                        </div>
+                        <div class="image-placeholder reveal reveal-stagger aspect-video lg:aspect-auto">
+                            <img src="assets/b-assets/bhero-03.png" alt="Project">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <article class="article-content px-8 md:px-0 reveal mb-24 mt-4">
+            <h2>Overview<br>
+              <br>
+              
+            </h2>
+            <p>Biffa, the UK&rsquo;s largest provider of B2B waste management, undertook a major digital transformation to modernize how customers purchase and manage services. Operating in a highly regulated and operationally complex sector, Biffa faced pressure to reduce manual processes and improve customer satisfaction in an industry that had historically lagged behind other utilities in technology adoption.<br>
+              <br>
+            I was engaged to lead the <strong>experience strategy and design</strong> for a multi-year program, divided into two core initiatives: introducing eCommerce capabilities and transforming ongoing account management and retention.</p>
+<h2>The Challenge<br>
+      <br>
+      </h2>
+            <p>Biffa&rsquo;s reliance on offline channels for managing a diverse customer base—from independent shops to national corporations—created several challenges:</p>
+<ul>
+        <li><strong>High Cost-to-Serve:</strong> Driven by manual sales and repetitive service interactions.</li>
+        <li><strong>Limited Scalability:</strong> Routine transactions and account management were difficult to scale without increasing headcount.</li>
+        <li><strong>Low Transparency:</strong> Customers were forced to depend on support teams for basic service visibility.</li>
+        <li><strong>Sector Lag:</strong> The waste management sector was behind other utilities in adopting self-service technology.</li>
+            
+      </ul>
+          
+
+            <h2>Strategic Approach<br>
+            </h2>
+            <h3>Service Design &amp; Research</h3>
+            <p>We began by mapping current-state journeys alongside business process flows to identify inefficiencies and opportunities for simplification. I led a comprehensive research program that included:</p>
+            <ul>
+                <li><strong>Qualitative Interviews:</strong> Spanning small business owners to enterprise operations managers, finance and sustainability stakeholders, and third-party brokers (resellers of waste services).</li>
+                <li><strong>Internal Immersion:</strong> Shadowing telesales and customer service teams, call listening and visiting depots and processing facilities to understand ground-level delivery.</li>
+                
+          </ul>
+            <p>A key insight for small business owners was the intensity of bad feeling created through even through only occasional service problems, compounded by how the business treated escalations. Similarly for large business much time was concerned with checking reporting for errors or for areas to challenge on. There was a clear need to not just address specific pain points but shift the tone of the overall relationship.</p>
+            
+            <h3>Industry-First eCommerce</h3>
+            <p>Our first goal was to enable customers to contract services online—a capability no other waste management business offered at the time.</p>
+			
+			<ul>
+                <li><strong>Proving Feasibility:</strong> We used working prototypes supported by user testing to demonstrate that highly complex contracting could be simplified for the customer while maintaining accuracy. This upfront was key in achieving wider business buy-in for the change and answering important questions early on.</li>
+                <li><strong>Guided Decision-Making: </strong>The interface translated highly complex service configurations into simple, one-touch recommendations to build customer confidence.</li>
+				<li><strong>Process design:</strong> Alongside interface design we mapped the supporting business processes to connect the service to operational reality. Enabling a customer to contract their service and start their waste collections with no contact required.</li>
+                
+          </ul>
+         
+             <p><strong>The Customer Portal</strong></p>
+             <p>Once commerce was established, we focused on post-purchase management to reduce inbound queries, drive upsell and repeat services, reduce cost to serve and improve overall satisfaction.</p>
+			
+			<ul>
+                <li><strong>Designing for agency:</strong> We designed the portal around customer goals rather than internal system logic, prioritizing transparency to reduce "powerless" frustration felt by customers. We considered all journeys with the point of view that there should always be action for the customer to take if they chose to, or a resolution moment.</li>
+                <li><strong>Data Latency:</strong> Since operational data wasn't always available in real-time, we designed messaging and notifications to maintain trust even when gaps existed.</li>
+                <li><strong>Simple management:</strong> We understood the best service for many customers should feel invisible, so tasks needed to feel lightweight and instant, whether booking, amending, querying or reporting. We interrogated all flows from a business process and customer view to ensure we were always giving the most direct path to completion.</li>
+				<li><strong>Instant information:</strong> Key information was automatically uplifted based on customer need, such as rescheduled collections for a small business, or highlighting service trends for operations managers, based in their real world user cases.</li>
+                <li><strong>Changing relationships:</strong> We introduced data insights to tell stories around customers environmental impact, and linked these to knowledgebase articles , guides and products, aiming to shift perceptions around the role of a waste management for a business.</li>
+		  </ul>
+			
+		<p><strong>Modular Design for Diversity</strong></p>
+             <p>A central challenge was serving diverse needs—from small businesses seeking simplicity to enterprise users managing thousands of sites—through a single platform. We used modular, flexible design patterns that adapted to the user’s specific goals without fragmenting the overall experience.</p>
+
+            <h2>Impact<br>
+              <br>
+            </h2>
+            <p>The transformation shifted Biffa from a service provider to a strategic business partner, delivering strong commercial results.<br>
+               
+         <ul>
+                <li><strong>SME Sales Growth:</strong> 61% YoY increase (420% above target).</li>
+                <li><strong>Commercial Focus:</strong> We mapped KPIs directly to design tasks, ensuring that every feature—from smart category filtering to simplified account creation—was grounded in improving measurable performance.</li>
+                <li><strong>Contracting Speed:</strong> Reduced from 5 days (sales-led) to under 15 minutes (digital).</li>
+                <li><strong>Service Efficiency:</strong> We used regular cross team reviews to share progress and learning and add fidelity to our design system. Critical challenges could be quickly identified and support provided to maintain energy and momentum.</li>
+			 <li><strong>Operational Autonomy:</strong> Ability to contract and manage services with zero manual intervention.</li>
+         
+		  </ul>
+			
+  </article>
+
+    <section class="tight-padding border-t border-custom-grey">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="title-container-wide mb-12 mt-20 reveal">
+                <h2 class="title-large">Project Gallery</h2>
+            </div>
+
+            <div class="section-buffer">
+                <div class="gallery-container relative cursor-pointer group reveal" onclick="nextSlide()">
+                    <img id="galleryImage" src="assets/s-assets/gallery-01.png" class="w-full h-full object-cover transition-opacity duration-300">
+                        
+                    <div class="hidden md:flex absolute inset-0 items-center justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="bg-white/90 rounded-full text-19px text-black flex items-center justify-center leading-none tracking-tight px-6 pt-[16px] pb-[22px]">
+                            Next
+                        </span>
+                    </div>
+                </div>
+
+                <div class="mt-6 flex flex-col md:flex-row justify-between items-start reveal">
+                    <div class="max-w-2xl">
+                        <p id="galleryText" class="text-19px text-black-heading transition-opacity duration-300">Description of the first Speedy Hire project image or concept.</p>
+                            
+                        <div class="md:hidden mt-6">
+                            <button onclick="nextSlide()" class="text-19px underline underline-offset-4 text-black-heading">
+                                Next Image
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-19px">
+                        <span id="slideNumber">1</span> / <span id="totalSlides">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="mt-32 pt-[12px] border-t border-custom-grey reveal">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="article-content px-8 md:px-0 mt-20 pb-24">
+              <h2>Wasted Journeys: A little reflection.</h2>
+                <p>“And then the seagulls got involved”</p>
+                <p>A memorable line in one story a customer told me over the many hours of interviews researching for this program. This one a café owner from Penzance who relayed in great detail a time his bin was left uncollected outside his restaurant on a hot busy day, and escalating layers of stress this caused him.</p>
+                <p>His story a flashpoint in his relationship with the business that was otherwise positive but had left a mark. A moment of emotion that stood out in all the other uneventful days his service just worked.</p>
+                <p>Through the interviews we did we heard different versions of this story (not always involving seagulls) that relayed some acute pain poin where the business process and a personal situation collided.</p>
+                <p>The crescendo of the café owners’ story was him phoning customer services tand being told it had been reported as a ‘Wasted Journey’. A final insult in this poor man’s bad day. They were saying it was his fault, and if he wanted it collected he would need to pay again.</p>
+                <p>It’s fair to say no one wanted this situation, but with all the best will in the world sometimes it can seem what the business needs and the customer wants are fundamentally at odds. In this situation because someone needs to take the blame because there’s a cost to recollect that bin.</p>
+                <p>The business needs to protect its margins, so there needs to be a process to fairly assign who should pay when things go wrong. Fair enough, but it’s a process that is unintentionally designed to damage a relationship, even the term used, ‘Wasted Journey’, accusatory, loaded with bad feeling. </p>
+                <p>All businesses have these moments; the result of a process designed rationally for a single aim but done without context or feeling. It’s fair to say there was acknowledgment that as a business they struggled with true customer-centricity but there was an ambition to change this, and they saw this program of a way of not just transforming their service, but to some their culture as well.</p>
+                <p>I used the seagull story quite a lot when speaking to people in the business, as a way of contextualising some process change we were discussing or as rationale for an interface design, partly because the story was funny but more because everyone could recognise it, and it brought the customer so quickly into focus.</p>
+                <p>As designers it’s one of the things we try and do, look for these moments in an experience and try to make them better, make a change big or small that can make a difference in someone’s day or how they feel about a service overall. After one telling of the story, this time with the head of customer services while trying to refine the messaging of a particular screen, I felt a small moment of victory for that café owner on that hot, stressful day. </p>
+                <p>“What would really help is if we didn’t call it a Wasted Journey” I suggested, and after a short pause they replied, “I think that’s probably a good idea”.</p>
+            </div>
+        </div>
+    </section>
+		
+</main>
+
+    <footer class="reveal pb-20 mt-32">
+        <div class="border-t border-custom-grey tight-padding">
+            <div class="max-w-7xl mx-auto px-8">
+                <p class="text-19px">© 2026 Louis Sheppard — Experience Strategy &amp; Design</p>
+            </div>
+      </div>
+</footer>
+
+    <script>
+        // GALLERY DATA - UPDATE THESE FOR THIS PAGE
+        const galleryItems = [
+            { image: "assets/b-assets/bgallery-01.png", text: "New eCommerce checkout flow designed to simplify account creation and mixed basket management." },
+            { image: "assets/b-assets/bgallery-02.png", text: "Customer portal dashboard allowing corporate hire managers to manage site-specific equipment lists." },
+            { image: "assets/b-assets/bgallery-03.png", text: "Mobile app interface focused on quick tool hire for tradespeople on the move." },
+		 { image: "assets/b-assets/bgallery-04.png", text: "New eCommerce checkout flow designed to simplify account creation and mixed basket management." },
+            { image: "assets/b-assets/bgallery-05.png", text: "Customer portal dashboard allowing corporate hire managers to manage site-specific equipment lists." },
+        ];
+
+        let currentIndex = 0;
+
+        function updateGallery() {
+            const img = document.getElementById('galleryImage');
+            const txt = document.getElementById('galleryText');
+            const num = document.getElementById('slideNumber');
+            const total = document.getElementById('totalSlides');
+
+            if (galleryItems.length > 0) {
+                img.src = galleryItems[currentIndex].image;
+                txt.innerText = galleryItems[currentIndex].text;
+                num.innerText = currentIndex + 1;
+                total.innerText = galleryItems.length;
+            }
+        }
+
+        function nextSlide() {
+            const img = document.getElementById('galleryImage');
+            const txt = document.getElementById('galleryText');
+            
+            img.style.opacity = '0';
+            txt.style.opacity = '0';
+            
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % galleryItems.length;
+                updateGallery();
+                img.style.opacity = '1';
+                txt.style.opacity = '1';
+            }, 300);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Gallery
+            updateGallery();
+
+            // REVEAL ANIMATIONS
+            const observerOptions = { threshold: 0.05, rootMargin: '0px 0px -50px 0px' };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (!entry.target.classList.contains('reveal-stagger')) {
+                            entry.target.classList.add('active');
+                        } else {
+                            const parent = entry.target.parentElement;
+                            const staggers = parent.querySelectorAll('.reveal-stagger');
+                            staggers.forEach((el, index) => {
+                                setTimeout(() => { el.classList.add('active'); }, index * 100);
+                            });
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const targets = document.querySelectorAll('.reveal');
+            targets.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
