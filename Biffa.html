@@ -157,7 +157,7 @@
             <div class="max-w-7xl mx-auto px-8 hero-buffer">
                 
                 <div class="mt-2 mb-10 reveal">
-                    <a href="index.html" class="back-link underline underline-offset-4 hover:opacity-50 transition-opacity">Back home</a>
+                    <a href="index.html#work" class="back-link underline underline-offset-4 hover:opacity-50 transition-opacity">Back to case studies</a>
                 </div>
 
                 <div class="mb-12 reveal">
@@ -234,7 +234,7 @@
                 <li><strong>Data Latency:</strong> Since operational data wasn't always available in real-time, we designed messaging and notifications to maintain trust even when gaps existed.</li>
                 <li><strong>Simple management:</strong> We understood the best service for many customers should feel invisible, so tasks needed to feel lightweight and instant, whether booking, amending, querying or reporting. We interrogated all flows from a business process and customer view to ensure we were always giving the most direct path to completion.</li>
 				<li><strong>Instant information:</strong> Key information was automatically uplifted based on customer need, such as rescheduled collections for a small business, or highlighting service trends for operations managers, based in their real world user cases.</li>
-                <li><strong>Changing relationships:</strong> We introduced data insights to tell stories around customers environmental impact, and linked these to knowledgebase articles , guides and products, aiming to shift perceptions around the role of a waste management for a business.</li>
+                <li><strong>Changing relationships:</strong> We introduced data insights to tell stories around customers environmental impact, and linked these to knowledgebase articles, guides and products, aiming to shift perceptions around the role of a waste management supplier for a business.</li>
 		  </ul>
 			
 		<p><strong>Modular Design for Diversity</strong></p>
@@ -247,7 +247,6 @@
                
          <ul>
                 <li><strong>SME Sales Growth:</strong> 61% YoY increase (420% above target).</li>
-                <li><strong>Commercial Focus:</strong> We mapped KPIs directly to design tasks, ensuring that every feature—from smart category filtering to simplified account creation—was grounded in improving measurable performance.</li>
                 <li><strong>Contracting Speed:</strong> Reduced from 5 days (sales-led) to under 15 minutes (digital).</li>
                 <li><strong>Service Efficiency:</strong> We used regular cross team reviews to share progress and learning and add fidelity to our design system. Critical challenges could be quickly identified and support provided to maintain energy and momentum.</li>
 			 <li><strong>Operational Autonomy:</strong> Ability to contract and manage services with zero manual intervention.</li>
@@ -293,7 +292,7 @@
 <section class="mt-32 pt-[12px] border-t border-custom-grey reveal">
         <div class="max-w-7xl mx-auto px-8">
             <div class="article-content px-8 md:px-0 mt-20 pb-24">
-              <h2>Wasted Journeys: A little reflection.</h2>
+              <h2>Wasted Journeys: A brief reflection.</h2>
                 <p>“And then the seagulls got involved”</p>
                 <p>A memorable line in one story a customer told me over the many hours of interviews researching for this program. This one a café owner from Penzance who relayed in great detail a time his bin was left uncollected outside his restaurant on a hot busy day, and escalating layers of stress this caused him.</p>
                 <p>His story a flashpoint in his relationship with the business that was otherwise positive but had left a mark. A moment of emotion that stood out in all the other uneventful days his service just worked.</p>
@@ -328,6 +327,15 @@
 		 { image: "assets/b-assets/bgallery-04.png", text: "Detail of front and back stage eCommerce and customer onboarding process." },
             { image: "assets/b-assets/bgallery-05.png", text: "Developing concepts for how to interpret complex waste, service and environmental data." },
         ];
+
+ // PRELOADER ADDED HERE
+    function preloadImages() {
+        galleryItems.forEach((item) => {
+            const img = new Image();
+            img.src = item.image;
+        });
+    }
+    window.addEventListener('load', preloadImages);
 
         let currentIndex = 0;
 

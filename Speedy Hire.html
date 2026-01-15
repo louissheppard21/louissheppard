@@ -157,7 +157,7 @@
             <div class="max-w-7xl mx-auto px-8 hero-buffer">
                 
                 <div class="mt-2 mb-10 reveal">
-                    <a href="index.html" class="back-link underline underline-offset-4 hover:opacity-50 transition-opacity">Back home</a>
+                    <a href="index.html#work" class="back-link underline underline-offset-4 hover:opacity-50 transition-opacity">Back to case studies</a>
                 </div>
 
                 <div class="mb-12 reveal">
@@ -298,7 +298,7 @@
 <section class="mt-32 pt-[12px] border-t border-custom-grey reveal">
         <div class="max-w-7xl mx-auto px-8">
             <div class="article-content px-8 md:px-0 mt-20 pb-24">
-              <h2>The Speedy Way: A little reflection.</h2>
+              <h2>The Speedy Way: A brief reflection.</h2>
                 <p>‘The Speedy Way’ was I phrase I heard quite a bit early on from people across the business. It didn’t really have a fixed meaning, mostly I took it to mean a kind of no-nonsense, can-do positive spirit, and occasionally it was used a bit ironically, like when acknowledging certain things could be done better but that’s not how they did them.</p>
                 <p>This wasn’t an official tagline, I’d never seen it any brand guidelines, but it showed there was something under the surface of the business, an understanding between colleagues that there was something unique in the people, processes and mindsets there.</p>
                 <p>At some level all organisations have this, an underlying energy, hard to put your finger on exactly but there. It might be called a brand or culture but these don't seem quite right.<br>
@@ -332,6 +332,15 @@
 		  { image: "assets/s-assets/sgallery-04.png", text: "The new Speedy Hire Design System" },
 
         ];
+
+ // PRELOADER ADDED HERE
+    function preloadImages() {
+        galleryItems.forEach((item) => {
+            const img = new Image();
+            img.src = item.image;
+        });
+    }
+    window.addEventListener('load', preloadImages);
 
         let currentIndex = 0;
 

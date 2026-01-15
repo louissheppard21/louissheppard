@@ -157,7 +157,7 @@
             <div class="max-w-7xl mx-auto px-8 hero-buffer">
                 
                 <div class="mt-2 mb-10 reveal">
-                    <a href="index.html" class="back-link underline underline-offset-4 hover:opacity-50 transition-opacity">Back home</a>
+                    <a href="index.html#work" class="back-link underline underline-offset-4 hover:opacity-50 transition-opacity">Back to case studies</a>
                 </div>
 
                 <div class="mb-12 reveal">
@@ -304,6 +304,15 @@
             { image: "assets/f-assets/fgallery-02.png", text: "Detail from the overall future state customer journey map." },
             { image: "assets/f-assets/fgallery-03.png", text: "Designs considered critical touchpoints through the passenger journey." },
         ];
+
+ // PRELOADER ADDED HERE
+    function preloadImages() {
+        galleryItems.forEach((item) => {
+            const img = new Image();
+            img.src = item.image;
+        });
+    }
+    window.addEventListener('load', preloadImages);
 
         let currentIndex = 0;
 
