@@ -6,322 +6,374 @@
     <title>Louis Sheppard - Profile 2026</title>
 
     <link rel="stylesheet" href="https://use.typekit.net/lbw8rgr.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    
     <style>
+        /* Smooth Scroll Core */
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto !important; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+
         body { 
             font-family: "helvetica-neue-world", "neue-helvetica-world", sans-serif; 
             font-weight: 400;
             color: #505050;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
-        .title-large { 
+        .title-header { 
             font-size: 28px;
             line-height: 35px;
             letter-spacing: -0.02em;
             color: #505050;
         }
 
-        .text-19px { 
-            font-size: 19px;
-            line-height: 1.3;
-            letter-spacing: 0.015em;
+        .title-large { 
+            font-size: 58px;
+            line-height: 58px;
+            letter-spacing: -1.74px;
+            color: #505050;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        @media (max-width: 768px) { 
+            .title-large { font-size: 36px; line-height: 40px; letter-spacing: -1px; }
+            .title-header { font-size: 24px; line-height: 30px; }
         }
 
         .text-black-heading { color: #000; }
-        .title-container-wide { max-width: 842px; }
-        .border-custom-grey { border-color: #DEDEDE; }
+        .title-container-wide { max-width: 900px; }
+        .border-custom-black { border-color: #000000; }
 
-        .image-placeholder,
-        .image-16-9, 
         .gallery-container {
-            background-color: #f3f3f3;
+            background-color: #ffffff; 
             border-radius: 8px;
             overflow: hidden;
-            transition: opacity 0.4s ease;
-        }
-
-        .image-16-9, 
-        .gallery-container {
             aspect-ratio: 16 / 9;
+            line-height: 0; 
         }
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+        img, video { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            display: block; 
+            vertical-align: middle; 
+            transform: scale(1.01); 
         }
 
         .tight-padding { padding-top: 2px; }
-        .header-custom { padding-top: 2px; padding-bottom: 120px; }
+        .header-custom { padding-top: 2px; padding-bottom: 80px; }
+        @media (min-width: 768px) { .header-custom { padding-bottom: 120px; } }
+
+        .footer-custom { padding-top: 2px; padding-bottom: 120px; }
         .section-buffer { padding-bottom: 120px; }
-
-        /* Proportion Scaling for Mosaic */
-        .mosaic-hero {
-            display: grid;
-            width: 100%;
-            aspect-ratio: 4 / 5; 
-        }
-
-        @media (min-width: 1024px) {
-            .mosaic-hero {
-                aspect-ratio: 16 / 9; 
-            }
-        }
 
         .reveal {
             opacity: 0;
             transform: translateY(20px);
-            transition:
-                opacity 0.8s cubic-bezier(0.21, 0.6, 0.35, 1),
-                transform 0.8s cubic-bezier(0.21, 0.6, 0.35, 1);
+            transition: opacity 1.2s cubic-bezier(0.21, 0.6, 0.35, 1), transform 1.2s cubic-bezier(0.21, 0.6, 0.35, 1);
+            transition-delay: 0.1s;
+            will-change: transform, opacity;
         }
 
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+        .reveal-header {
+            opacity: 0;
+            transform: translateY(5px);
+            transition: opacity 0.8s cubic-bezier(0.21, 0.6, 0.35, 1), transform 0.8s cubic-bezier(0.21, 0.6, 0.35, 1);
+            will-change: transform, opacity;
+        }
+
+        .reveal.active, .reveal-header.active { opacity: 1; transform: translateY(0); }
+
+        .accordion-content {
+            transition: max-height 0.6s cubic-bezier(0.21, 0.6, 0.35, 1);
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .accordion-toggle {
+            text-decoration: none !important;
+            border: none;
+            background: none;
+            padding: 0;
+            outline: none;
+        }
+
+        .text-wrapper {
+            display: inline-block;
+            line-height: 1.1;
+        }
+
+        .toggle-symbol {
+            display: inline-block;
+            transform: translateY(-2px); 
+            margin-left: 6px;
         }
     </style>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 </head>
 
 <body class="bg-white">
 
-<header class="border-t border-b border-custom-grey header-custom reveal">
+<header class="border-b border-custom-black header-custom reveal-header">
     <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-start">
-        <div class="mb-6 md:mb-0 title-container-wide">
-            <h1 class="title-large text-black-heading">Louis Sheppard</h1>
-            <p class="title-large">Profile 2026</p>
+        <div class="md:mb-0 title-container-wide">
+            <h1 class="title-header text-black-heading">Louis Sheppard</h1>
+            <p class="title-header">Profile 2026</p>
         </div>
-      <p class="text-19px">lwshepp@gmail.com</p>
+        <p class="title-header">lwshepp@gmail.com</p>
     </div>
 </header>
 
 <main>
 
-<section class="tight-padding border-b border-custom-grey">
-    <div class="max-w-7xl mx-auto px-8 section-buffer">
-        <div class="title-container-wide mb-12 reveal">
+<section class="border-b border-custom-black">
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="title-container-wide mt-2 mb-[25vh] lg:mb-[40vh] reveal">
             <h2 class="title-large">
-                I'm a Design Leader who uses service design, experience strategy and hands-on execution to imagine, shape and ship new customer experiences and services.
+                I'm a design leader who uses service design, experience strategy and hands-on execution to imagine, shape and ship new customer experiences and services.
             </h2>
         </div>
-
-        <div class="grid gap-[20px] mosaic-hero" style="grid-template-rows: 1fr 1fr;">
-            <div class="grid grid-cols-9 lg:grid-cols-12 gap-[20px]">
-                <div class="col-span-6 image-placeholder reveal reveal-stagger">
-                    <img src="assets/01-mobile.png" alt="Office Mobile" class="lg:hidden">
-                    <img src="assets/01.png" alt="project" class="hidden lg:block">
-                </div>
-                <div class="hidden lg:block lg:col-span-2 image-placeholder reveal reveal-stagger">
-                    <img src="assets/02.png" alt="project">
-                </div>
-                <div class="col-span-3 lg:col-span-4 image-placeholder reveal reveal-stagger">
-                    <img src="assets/02-mobile.png" alt="project" class="lg:hidden">
-                    <img src="assets/03.png" alt="project" class="hidden lg:block">
-                </div>
-            </div>
-            <div class="grid grid-cols-9 lg:grid-cols-12 gap-[20px]">
-                <div class="col-span-3 lg:col-span-2 image-placeholder reveal reveal-stagger">
-                    <img src="assets/03-mobile.png" alt="project" class="lg:hidden">
-                    <img src="assets/04.png" alt="project" class="hidden lg:block">
-                </div>
-                <div class="hidden lg:block lg:col-span-4 image-placeholder reveal reveal-stagger">
-                    <img src="assets/05.png" alt="project">
-                </div>
-                <div class="col-span-6 image-placeholder reveal reveal-stagger">
-                    <img src="assets/04-mobile.png" alt="project" class="lg:hidden">
-                    <img src="assets/06.png" alt="project" class="hidden lg:block">
-                </div>
-            </div>
+        <div class="pb-[30px] reveal">
+            <p class="title-header">Projects</p>
         </div>
     </div>
 </section>
 
-<section class="tight-padding border-b border-custom-grey reveal">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="title-container-wide mb-[10px]">
-            <h2 class="title-large mb-2">
-
-I believe Design isn't just craft, it's a way of thinking and acting through all aspects of the solution. I use a blended skillset to work through the end-to-end process to shape experiences that succeed. <br><br> 
-
-
-            
+<section class="tight-padding border-b border-custom-black project-section">
+    <div class="max-w-7xl mx-auto px-8 section-buffer flex flex-col gap-[20px]">
+        <div class="title-container-wide mt-2 mb-[30px] md:mb-[45px] reveal">
+            <h2 class="title-large">LIV Golf. Building a totally different kind of sport experience.</h2>
         </div>
+        <div class="gallery-container relative reveal">
+            <video muted loop playsinline preload="auto">
+                <source src="assets/livgolf/livgolf.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="gallery-container relative reveal"><img src="assets/livgolf/image-01.png" alt="LIV Golf 1"></div>
+        <div class="gallery-container relative reveal"><img src="assets/livgolf/image-02.png" alt="LIV Golf 2"></div>
+        <div class="title-container-wide mt-4 reveal">
+            <div class="accordion-content">
+                <div class="title-header pb-6 space-y-6">
+                    <p>After their inaugural season getting their fledging, high profile new league off the ground, Liv Golf needed a complete fan engagement ecosystem to bring their championship to biggest possible audience and build the fanbase to make them sustainable into the future.</p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12 ml-auto max-w-4xl section-buffer">
-            <p class="text-19px">Understanding the human, environmental, business, and technical systems that experiences exist within.</p>
-            <p class="text-19px">Listening, reasoning and responding to different perspectives and priorities, finding alignment and always moving forward.</p>
-            <p class="text-19px">The ability to form, hold and execute a vision, taking it from initial idea through to real world use.</p>
+<p>Over the first 8 months we worked to get them from 0-1 for tee off of the first event of their first full season, then scaled rapidly up as they grew their operations. The work covered event marketing, ticketing, store, fantasy, 12 team websites, and full coverage of all the sport with scoring, data, streaming and stories for both global fans and those attending on course.</p>
+
+<p>Key to delivering on their strategy was providing an experience that radically set the league apart from legacy sports brands and brought the game of golf to a new audience. Through all touch points we needed to consider how to capitalise on their initial profile with existing golf fans, while making it feel exciting and accessible for everyone else.</p>
+
+<p>Working with teams across the business and directly with c-suite I set out the experience vision and digital strategy, helped plan the roadmap with product owners, and provided direction to design teams and hands-on execution. I also worked closely with Liv Golfs burgeoning brand team to take their visual system from a logo and a font, into a fully fledged brand experience across digital and physical touch points.</p>
+                </div>
+            </div>
+            <button class="accordion-toggle title-header cursor-pointer">
+                <span class="text-wrapper">Information <span class="toggle-symbol">+</span></span>
+            </button>
         </div>
     </div>
 </section>
 
-<section id="work" class="tight-padding border-b border-custom-grey">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="title-container-wide mb-12 reveal">
-            <h2 class="title-large">Selected Case Studies</h2>
+<section class="tight-padding border-b border-custom-black project-section">
+    <div class="max-w-7xl mx-auto px-8 section-buffer flex flex-col gap-[20px]">
+        <div class="title-container-wide mt-2 mb-[30px] md:mb-[45px] reveal">
+            <h2 class="title-large">First Bus. Designing the future of travel for millions of travellers.</h2>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-[20px] gap-y-[48px] section-buffer">
-            <a href="Biffa.html" class="group flex flex-col reveal reveal-stagger">
-                <div class="image-16-9 mb-3 relative overflow-hidden">
-                    <img src="assets/preview-01a.jpg" alt="Biffa" class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
-                    <img src="assets/preview-01.jpg" alt="Biffa Hover" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+        <div class="gallery-container relative reveal"><img src="assets/firstbus/image-01.png" alt="Sky 1"></div>
+        <div class="gallery-container relative reveal"><img src="assets/firstbus/image-02.png" alt="Sky 2"></div>
+        <div class="title-container-wide mt-4 reveal">
+            <div class="accordion-content">
+                <div class="title-header pb-6 space-y-6">
+                    <p>First Bus were shifting their focus from a business model prioritising operating efficiency towards acheiving new revenue growth, looking ahead to an investment in technology, data and the customer experience to do this. I worked in a cross-functional team to set the vision for their future state customer experience and set out the foundations needed for getting this implemented.</p>
+					<p>I led the creation of a current and future state customer journey map through facilitating workshops across the business, reviewing customer feedback data and calls, and working with analytics teams to find pain points across digital interactions. The final future-state journey demonstrated a complete picture of how interconnected products and off-line touch points would be orchestrated to drive the revenue targets the business had set, and what technology, data and content were needed at each stage.</p>
+					<p>There was also a need to support the business case and sell the vision to execs and regional network heads. I did this through developing interface designs and storyboards to bring the journey to life and to solve for long standing customer experience challenges. Rather than purely conceptual these were designed for real world operations and data and robustly validated.</p>
                 </div>
-                <h3 class="text-19px text-black-heading">Biffa</h3>
-                <p class="text-19px">A complete transformation of service delivery and customer experience for businesses of all sizes across the UK.</p>
-                <span class="text-19px underline underline-offset-4">View Case Study</span>
-            </a>
-            <a href="TheOpen.html" class="group flex flex-col reveal reveal-stagger">
-                <div class="image-16-9 mb-3 relative overflow-hidden">
-                    <img src="assets/preview-02a.jpg" alt="Project Beta" class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
-                    <img src="assets/preview-02.jpg" alt="Project Beta Hover" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                </div>
-                <h3 class="text-19px text-black-heading">The Open Championship</h3>
-                <p class="text-19px">A fan experience ecosystem for the worlds oldest Golf Championship.</p>
-                <span class="text-19px underline underline-offset-4">View Case Study</span>
-            </a>
-
-            <a href="Speedy Hire.html" class="group flex flex-col reveal reveal-stagger">
-                <div class="image-16-9 mb-3 relative overflow-hidden">
-                    <img src="assets/preview-03a.png" alt="Speedy Hire" class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
-                    <img src="assets/preview-03.jpg" alt="Speedy Hire Hover" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                </div>
-                <h3 class="text-19px text-black-heading">Speedy Hire</h3>
-                <p class="text-19px">eCommerce transformation to help tradespeople, construction firms and DIYers get the job done.</p>
-                <span class="text-19px underline underline-offset-4">View Case Study</span>
-            </a>
-
-            <a href="FirstBus.html" class="group flex flex-col reveal reveal-stagger">
-                <div class="image-16-9 mb-3 relative overflow-hidden">
-                    <img src="assets/preview-04a.png" alt="First Bus" class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
-                    <img src="assets/preview-04.jpg" alt="First Bus Hover" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                </div>
-                <h3 class="text-19px text-black-heading">First Bus</h3>
-                <p class="text-19px">Designing the future of travel for millions of passengers.</p>
-                <span class="text-19px underline underline-offset-4">View Case Study</span>
-            </a>
+            </div>
+            <button class="accordion-toggle title-header cursor-pointer">
+                <span class="text-wrapper">Information <span class="toggle-symbol">+</span></span>
+            </button>
         </div>
     </div>
 </section>
-
-<section class="tight-padding border-b border-custom-grey">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="title-container-wide mb-12 mt-2 reveal">
-            <h2 class="title-large">Further project examples</h2>
+	
+<section class="tight-padding border-b border-custom-black project-section">
+    <div class="max-w-7xl mx-auto px-8 section-buffer flex flex-col gap-[20px]">
+        <div class="title-container-wide mt-2 mb-[30px] md:mb-[45px] reveal">
+            <h2 class="title-large">Arup. Bringing a world of projects, expertise and ideas together into a single proposition.</h2>
         </div>
-
-        <div class="section-buffer">
-            <div class="gallery-container relative cursor-pointer group reveal" onclick="nextSlide()">
-                <img id="galleryImage" src="assets/gallery-01.png" class="w-full h-full object-cover transition-opacity duration-300">
-                
-                <div class="hidden md:flex absolute inset-0 items-center justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span class="bg-white/90 rounded-full text-19px text-black flex items-center justify-center leading-none tracking-tight px-6 pt-[16px] pb-[22px]">
-                        Next
-                    </span>
+        <div class="gallery-container relative reveal">
+            <video muted loop playsinline preload="auto">
+                <source src="assets/arup/arup2.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="gallery-container relative reveal">
+            <img src="assets/arup/image-02.png" alt="Arup 1">
+        </div>
+        <div class="gallery-container relative reveal">
+            <video muted loop playsinline preload="auto">
+                <source src="assets/arup/arup.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="title-container-wide mt-4 reveal">
+            <div class="accordion-content">
+                <div class="title-header pb-6 space-y-6">
+                    <p>Arup are pre-eminent in the world of engineering and design, responsible for some of the most iconic and seemingly impossible built environments, including Sagrada Familia, Sydney Opera House and London’s Elizabeth Line. With thousands of projects completed every year, and a hugely diverse and specialised expertise delivered through 99 global offices, they had struggled to articulate a single, clear proposition and brand voice.</p>
+					<p>I provided product strategy, creative direction and design leadership for a project to build their new global website and turn the businesses new strategic positioning into something that would be accessible and tangible for customers. Arup’s previous attempts to transform their digital experience had stalled as discovery became bogged down in debate, so rather than re-open this I designed a program around design-led exploration and definition, prioritising tangible outputs over broad conceptual ideas to give clarity and build consensus.</p>
+					<p>I worked closely with Arup content teams to make sure key messaging was aligned to strategic aims and to design narrative patterns to bring clarity and consistency to their storytelling. A key need was also to be able to provide high-level insight, without losing any technical depth. We used the concept of macro and micro interactions where detail could be triggered where needed, supported by a network taxonomy to cross-link content and build journeys based on customer intent.</p>
                 </div>
             </div>
-
-            <div class="mt-6 flex flex-col md:flex-row justify-between items-start reveal">
-                <div class="max-w-2xl">
-                    <p id="galleryText" class="text-19px text-black-heading transition-opacity duration-300">Website for global lighting manufacturer iGuzzini to allow customers to explore, find, configure and design solutions from a catalogue of thousands of products, accessories and systems. With inspiration, case studies, support and all the technical detail needed. (Launching 2026) </p>
-                    
-                    <div class="md:hidden mt-6">
-                        <button onclick="nextSlide()" class="text-19px underline underline-offset-4 text-black-heading">
-                            Next Image
-                        </button>
-                    </div>
-                </div>
-                <div class="mt-4 md:mt-0 text-19px">
-                    <span id="slideNumber">1</span> / 6
+            <button class="accordion-toggle title-header cursor-pointer">
+                <span class="text-wrapper">Information <span class="toggle-symbol">+</span></span>
+            </button>
+        </div>
+    </div>
+</section>
+	
+<section class="tight-padding border-b border-custom-black project-section">
+    <div class="max-w-7xl mx-auto px-8 section-buffer flex flex-col gap-[20px]">
+        <div class="title-container-wide mt-2 mb-[30px] md:mb-[45px] reveal">
+            <h2 class="title-large">Biffa. Transforming the complete end-to-end customer experience.</h2>
+        </div>
+        <div class="gallery-container relative reveal">
+            <video muted loop playsinline preload="auto">
+                <source src="assets/biffa/biffa.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="gallery-container relative reveal"><img src="assets/biffa/image-01.png" alt="Biffa 1"></div>
+        <div class="title-container-wide mt-4 reveal">
+            <div class="accordion-content">
+                <div class="title-header pb-6 space-y-6">
+                    <p>Biffa provide essential waste utilities to businesses of all sizes up and down the country, covering everyone from your local chip shop to supermarket chains. With awareness that they and their sector had lagged behind other utilities providers in adoption digital self serve, they embarked on a multi year transformation to address flat lining sales, manual operational reliance, and to bring greater customer centricity across the business.</p>
+					<p>I planned and led customer research, provided service design for mapping out of current and future journeys and systems, and led experience design teams.</p>
+					<p>Work was split across two phases, the first focused on acquiring and on-boarding new customers, where the key challenge was turning complex and legislatively heavy contracting into a simple self-serve journey, and rethinking back-stage systems to allow a customer to get up and running with bins on site without any contact.</p>
+					<p>The second phase was design of a customer portal and connected services, allowing any customer to manage their service completely online with reporting, tracking, booking, invoicing and support. Critical here was to design a solution that could efficiently serve any type and size of customer, from single-owner operators to enterprise operations managers responsible for large, distributed service estates. We did this through modular, flexible patterns that adapted to different goals without fragmenting the experience.</p>
                 </div>
             </div>
+            <button class="accordion-toggle title-header cursor-pointer">
+                <span class="text-wrapper">Information <span class="toggle-symbol">+</span></span>
+            </button>
+        </div>
+    </div>
+</section>
+	
+<section class="tight-padding border-b border-custom-black project-section">
+    <div class="max-w-7xl mx-auto px-8 section-buffer flex flex-col gap-[20px]">
+        <div class="title-container-wide mt-2 mb-[30px] md:mb-[45px] reveal">
+            <h2 class="title-large">iGuzzini. Reinventing the specification and sales process for a global lighting manufacturer.</h2>
+        </div>
+        <div class="gallery-container relative reveal">
+            <video muted loop playsinline preload="auto">
+                <source src="assets/iguzzini/iguzzini.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="gallery-container relative reveal"><img src="assets/iguzzini/image-01.png" alt="Biffa 1"></div>
+        <div class="title-container-wide mt-4 reveal">
+            <div class="accordion-content">
+                <div class="title-header pb-6 space-y-6">
+                    <p>Italian lighting manufacturer produce, specify and sell lighting systems around the world for architectural, heritage and civic projects, from illuminating the Louvre to the City of Valencia lighting masterplan. I worked with them to digitise their product catalogue of thousands of products, systems and accessories, and provide the tools help customers and their specifier teams to design lighting solutions.</p>
+					<p>I led research to speak with customers around the world, distribution partners and internal specifier and sales teams. The business had planned to end its production of the printed product catalogue, which had been the cornerstone of sales and specification activity, so there was a critical need to make sure this would not be disrupted through moving online, and that we find ways to better support these teams.</p>
+					<p>The solution needed to support the ability to explore product ranges, find inspiration and application ideas, enable content teams to build rich product stories, and provide all the technical detail and configuration options needed. It was delivered through an experience layer and visual system that reflected iGuzzini’s strong industrial design heritage.</p>
+					<p>The website is due to launch FY2026.</p>
+					
+                </div>
+            </div>
+            <button class="accordion-toggle title-header cursor-pointer">
+                <span class="text-wrapper">Information <span class="toggle-symbol">+</span></span>
+            </button>
+        </div>
+    </div>
+</section>
+	
+<section class="tight-padding border-b border-custom-black project-section">
+    <div class="max-w-7xl mx-auto px-8 section-buffer flex flex-col gap-[20px]">
+        <div class="title-container-wide mt-2 mb-[30px] md:mb-[45px] reveal">
+            <h2 class="title-large">Speedy Hire. Redesigning how the end-to-end service is delivered.</h2>
+        </div>
+        <div class="gallery-container relative reveal"><img src="assets/speedy/image-01.png" alt="Sky 1"></div>
+        <div class="title-container-wide mt-4 reveal">
+            <div class="accordion-content">
+                <div class="title-header pb-6 space-y-6">
+                    <p>Speedy Hire are the UK’s leader in equipment hire supplying trade, constructions firms and retail customers. I provided service design and led experience design teams for a multi year program to transform their eCommerce experience across web, app and point of sale.</p>
+					<p>With a reliance on manual process and operational teams on the ground to deliver the service, Speedy had fallen far behind competitors and their transformation plan was intended to fundamentally change they way they did business and delivered the their service, with investment in logistics, data and customer experience.</p>
+					<p>Using service design methods and working with stakeholders across the business I designed the future state customer journey and developed the vision to join up thinking across multiple teams and initiatives. Key early on was to ensure strong foundations for scaled delivery, this included a complete redesign of the catalogue product taxonomy and creation of a comprehensive design system to guide both product decision making and interaction design principles.</p>
+					<p>Through the program I provided design direction to teams and hands-on execution where needed. The work included not only detailed journey and interaction design, but rethinking underlying business rules and processes.  Using design-led activities to make the impact of operational decisions visible and then rethink how the service should be delivered.</p>
+					<p>The program is ongoing with the eCommerce platform due to launch FY2026.</p>
+                </div>
+            </div>
+            <button class="accordion-toggle title-header cursor-pointer">
+                <span class="text-wrapper">Information <span class="toggle-symbol">+</span></span>
+            </button>
         </div>
     </div>
 </section>
 
 <section class="tight-padding reveal">
     <div class="max-w-7xl mx-auto px-8">
-        <div class="title-container-wide mb-[10px]">
-            <h2 class="title-large mb-2">
-                For more details on any of these projects please get in touch.
-            </h2>
-            <a href="mailto:lwshepp@gmail.com" class="underline text-19px underline-offset-4">Contact me</a>
+        <div class="title-container-wide mt-2">
+            <h2 class="title-large">For more details on my approach or previous work, please <a href="mailto:lwshepp@gmail.com">get in touch.</a></h2>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12 ml-auto max-w-4xl section-buffer">
-            <p class="text-19px"></p>
-            <p class="text-19px"></p>
-            <p class="text-19px"></p>
-        </div>
+        <div class="section-buffer"></div>
     </div>
 </section>
 
 </main>
 
-<footer class="reveal pb-20">
-    <div class="border-t border-custom-grey tight-padding">
-        <div class="max-w-7xl mx-auto px-8">
-            <p class="text-19px">2026 Louis Sheppard — Experience Strategy & Design</p>
+<footer class="border-t border-custom-black footer-custom reveal">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-start">
+        <div class="md:mb-0 title-container-wide">
+            <h1 class="title-header text-black-heading">Louis Sheppard</h1>
+            <p class="title-header">Experience Strategy & Design</p>
         </div>
+        <p class="title-header">2026 Profile</p>
     </div>
 </footer>
 
 <script>
-    // CAROUSEL DATA & LOGIC FROM WORK.HTML
-    const galleryItems = [
-        { image: "assets/gallery-01.png", text: "Website for global lighting manufacturer iGuzzini to allow customers to explore, find, configure and design solutions from a catalogue of thousands of products, accessories and systems. With inspiration, case studies, support and all the technical detail needed. (Launching 2026)" },
-        { image: "assets/gallery-02.png", text: "A new service for Wren Kitchens delivered as a native app  to support customers through their full kitchen or bathroom renovation, including first inspiration, in-store browsing, designer meeting, final specification, purchase and installation.  " },
-        { image: "assets/gallery-03.png", text: "Website for Leeds Beckett University, to allow any type of student to explore education options, research and understand course details and application, and be inspired by the promise of the student experience." },
-        { image: "assets/gallery-04.png", text: "Website for Park Dean Resorts to allow holiday makers to plan and choose their ideal stay." },
-        { image: "assets/gallery-05.png", text: "Website for Arup, the worlds preeminent design and engineering firm. Turning thousands of projects, services and ideas into a single proposition and clear compelling narratives." },
-    ];
+    window.scrollTo(0, 0);
 
-    // PRELOADER ADDED HERE
-    function preloadImages() {
-        galleryItems.forEach((item) => {
-            const img = new Image();
-            img.src = item.image;
-        });
-    }
-    window.addEventListener('load', preloadImages);
+    const lenis = new Lenis({ 
+        duration: 0.8, 
+        lerp: 0.15, 
+        wheelMultiplier: 1.0, 
+        smoothWheel: true 
+    });
 
-    let currentIndex = 0;
-    function nextSlide() {
-        const img = document.getElementById('galleryImage');
-        const txt = document.getElementById('galleryText');
-        const num = document.getElementById('slideNumber');
-        img.style.opacity = '0';
-        txt.style.opacity = '0';
-        setTimeout(() => {
-            currentIndex = (currentIndex + 1) % galleryItems.length;
-            img.src = galleryItems[currentIndex].image;
-            txt.innerText = galleryItems[currentIndex].text;
-            num.innerText = currentIndex + 1;
-            img.style.opacity = '1';
-            txt.style.opacity = '1';
-        }, 300);
-    }
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
 
-    // INTERSECTION OBSERVER FOR REVEAL ANIMATIONS
-    const observer = new IntersectionObserver(entries => {
+    const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            const video = entry.target.querySelector('video');
             if (entry.isIntersecting) {
-                if (!entry.target.classList.contains('reveal-stagger')) {
-                    entry.target.classList.add('active');
-                } else {
-                    const items = entry.target.parentElement.querySelectorAll('.reveal-stagger');
-                    items.forEach((el, i) => {
-                        setTimeout(() => el.classList.add('active'), i * 100);
-                    });
-                }
+                setTimeout(() => { entry.target.classList.add('active'); }, 100);
+                if (video) video.play().catch(e => console.log(e));
+            } else {
+                if (video) video.pause();
             }
         });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.15, rootMargin: "0px 0px -10% 0px" });
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal, .reveal-header').forEach(el => { revealObserver.observe(el); });
+
+    document.querySelectorAll('.accordion-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.previousElementSibling;
+            const wrapper = button.querySelector('.text-wrapper');
+            const isOpened = content.style.maxHeight && content.style.maxHeight !== '0px';
+            
+            if (isOpened) {
+                content.style.maxHeight = '0px';
+                wrapper.innerHTML = 'Information <span class="toggle-symbol">+</span>';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                wrapper.innerHTML = 'Close <span class="toggle-symbol">-</span>';
+            }
+            
+            setTimeout(() => { lenis.resize(); }, 600);
+        });
+    });
 </script>
-
 </body>
 </html>
