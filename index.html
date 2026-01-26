@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis Sheppard - Profile 2026</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/lbw8rgr.css">
+    
+    <style>
+        /* Smooth Scroll Core */
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto !important; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+
+        body { 
+            font-family: "helvetica-neue-world", "neue-helvetica-world", sans-serif; 
+            font-weight: 400;
+            color: #505050;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        .title-header, .grid-text, .grid-subhead, .project-bullets li, .body-copy, .pill-button { 
+            font-size: 20px;
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+        }
+
+        .title-large { 
+            font-size: 58px;
+            line-height: 58px;
+            letter-spacing: -1.74px;
+            color: #505050;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        @media (max-width: 768px) { 
+            .title-large { font-size: 36px; line-height: 40px; letter-spacing: -1px; }
+        }
+
+        .text-black-heading { color: #000; }
+        .title-container-wide { max-width: 900px; }
+        .border-custom-black { border-color: #000000; }
+
+        /* Site Header: Top padding reduced to 10px */
+        .site-header {
+            width: 100%;
+            border-bottom: 1px solid #000;
+            padding-top: 10px; 
+            padding-bottom: 80px;
+        }
+        @media (min-width: 768px) { .site-header { padding-bottom: 120px; } }
+
+        .grid-subhead { color: #000; margin-top: 48px; margin-bottom: 12px; font-weight: 500; }
+        .project-bullets { list-style-type: none; padding-left: 0; margin-bottom: 30px; }
+        .project-bullets li { position: relative; padding-left: 45px; margin-bottom: 6px; }
+        .project-bullets li::before { content: "—"; position: absolute; left: 0; color: #505050; }
+
+        .gallery-container {
+            background-color: #ffffff; 
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            line-height: 0; 
+            cursor: pointer;
+        }
+
+        img, video { width: 100%; height: 100%; object-fit: cover; display: block; vertical-align: middle; transform: scale(1.01); }
+
+        .pill-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            color: #fff;
+            padding: 9px 32px 17px 32px; 
+            border-radius: 9999px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            margin-top: 24px;
+        }
+        .pill-button:hover { background-color: #333; }
+
+        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 1.2s cubic-bezier(0.21, 0.6, 0.35, 1), transform 1.2s cubic-bezier(0.21, 0.6, 0.35, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .accordion-content { transition: max-height 0.6s cubic-bezier(0.21, 0.6, 0.35, 1); max-height: 0; overflow: hidden; }
+        .detail-img-wrapper { background-color: #ffffff; border-radius: 8px; overflow: hidden; height: 380px; margin-bottom: 12px; }
+        @media (max-width: 768px) { .detail-img-wrapper { height: 220px; } }
+        
+        .space-y-paragraph p { margin-bottom: 24px; }
+        .section-buffer { padding-bottom: 120px; }
+        
+        .bottom-button-wrap { padding-top: 20px; padding-bottom: 40px; }
+    .grid-subhead1 {            font-size: 20px;
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+}
+.pill-button1 {            font-size: 20px;
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+}
+    </style>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+</head>
+
+<body class="bg-white">
+
+<header class="site-header">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-start">
+        <div class="md:mb-0">
+            <h1 class="title-large text-black-heading">Louis Sheppard</h1>
+            <h1 class="title-large">Profile &amp; Case Studies</h1>
+        </div>
+        <p class="title-header pt-[2px] md:pt-[5px]">lwshepp@gmail.com</p>
+    </div>
+</header>
+
+<main>
+
+<section class="border-b border-custom-black">
+    <div class="max-w-7xl mx-auto px-8 pt-[20px]">
+        <div class="title-container-wide mb-[25vh] lg:mb-[40vh] reveal">
+            <h2 class="title-large">I'm a design leader who uses product strategy, collaboration and hands-on execution to  shape  new customer experiences and services.</h2>
+        </div>
+        <div class="pb-[30px] reveal"><p class="title-header">Projects</p></div>
+    </div>
+</section>
+
+<section class="border-b border-custom-black project-section">
+    <div class="max-w-7xl mx-auto px-8 section-buffer flex flex-col gap-[20px]">
+        <div class="title-container-wide pt-[20px] mb-[30px] md:mb-[45px] reveal">
+            <h2 class="title-large">Biffa. End-to-end transformation of the customer experience.</h2>
+        </div>
+        <div class="gallery-container relative reveal accordion-trigger"><img src="assets/biffa/hero-01.png"></div>
+        <div class="reveal">
+            <div class="title-container-wide mt-3 body-copy scroll-anchor">
+                <p>Biffa, a major UK waste utility provider, was embarking on a multi-year transformation to embed digital self-service across its SME and enterprise customer base. The goals were to drive revenue growth, improve customer satisfaction, and reduce reliance on manual service operations — fundamentally changing how the business delivered its service.<br>
+                  <br>
+                I led experience strategy and design teams across the programme, ensuring delivery stayed focused on research-driven customer outcomes aligned to commercial and operational goals.</p>
+            </div>
+            <div class="button-container"><button class="pill-button accordion-toggle">Read the case study</button></div>
+            <div class="accordion-content">
+              <div class="title-container-wide mt-6 body-copy space-y-paragraph">
+                    <h3 class="grid-subhead" style="margin-top: 0;"><strong>The Challenge</strong></h3>
+                    <p>Biffa’s existing service model relied heavily on phone-based sales and support, with fragmented systems and highly manual operational processes. This had created:</p>
+					<ul class="project-bullets">
+                        <li>Long lead times to start or change a service</li>
+                        <li>High operational cost and errors</li>
+                        <li>Poor visibility for customers over contracts, collections and billing</li>
+                        <li>Flatlining SME sales and high service desk dependency</li>
+                    </ul>
+					<p>At the same time, the space was heavily regulated and operationally risky — mistakes in pricing, service configuration or waste compliance could have serious financial and legal implications.<br>
+				    The challenge was to design simple, trustworthy self-serve journeys that could scale commercially without creating unacceptable business or compliance risk.</p>
+                    
+                    <h3 class="grid-subhead"><strong>My Role</strong></h3>
+					<p>I lead design and product strategy across the programme, responsible for:</p>
+                    <ul class="project-bullets">
+                      <li>Setting the experience vision and long-term product direction</li>
+                        <li>Leading and coaching a team of designers across multiple workstreams</li>
+                        <li>Planning and running research to inform product strategy</li>
+                        <li>Partnering with Product, Engineering and Delivery leads on roadmaps and trade-offs</li>
+                        <li>Leading design teams through problem solving and framing opportunities</li>
+                        <li>Acting as the interface between design teams and senior business stakeholders</li>
+						 <li>Ensuring design decisions were grounded in operational reality and data availability</li>
+                    </ul>
+
+                    <h3 class="grid-subhead"><strong>Discovery & Strategy</strong></h3>
+                    <p>At the outset, I planned and led a comprehensive research programme combining:</p>
+					 <ul class="project-bullets">
+                      <li>Customer interviews across SME and enterprise segments</li>
+                        <li>Quantitative surveys</li>
+                        <li>Call listening sessions with sales and service desks</li>
+                        <li>Stakeholder interviews across operations, compliance, finance and IT</li>
+                       
+                    </ul>
+					 <p>This surfaced a set of consistent unmet needs:</p>
+					 <ul class="project-bullets">
+                      <li>Customers wanted to start, change and manage services online without waiting for callbacks</li>
+                        <li>Price transparency and service configuration were confusing and error-prone</li>
+                        <li>Stakeholders lacked confidence that changes made digitally would be executed correctly</li>
+                        <li>Internally, teams lacked a shared view of the end-to-end customer journey</li>
+                       
+                  </ul>
+					 <p>Using these insights, I led the creation of:</p>
+					 <ul class="project-bullets">
+                      <li>A future-state customer journey covering acquisition, onboarding, service management and billing</li>
+						 
+                        <li>A modular experience framework to support very different customer types without fragmenting the product</li>
+                        <li>A set of design principles balancing simplicity, trust and operational safety</li>
+                       
+                  </ul>
+					<p>These artefacts formed the foundation of the product vision and roadmap.</p>
+					
+
+
+                <h3 class="grid-subhead"><strong>Key Product Decisions & Trade-offs</strong></h3>
+                  
+					<p>1. Rather than launching full self-serve for all customers at once, I recommended a phased approach:</p>
+					 <ul class="project-bullets">
+                      <li>Phase 1: SME eCommerce onboarding</li>
+						 
+                        <li>Phase 2: Core self-serve account management</li>
+                        <li>Phase 3: Enterprise tooling and complex service changes</li>
+                       
+                  </ul>
+					
+                    <p> This reduced regulatory and operational risk while still delivering early commercial value.</p>
+					
+					<p>2. We  designed modular patterns that could adapt for diverse customer types:</p>
+					 <ul class="project-bullets">
+                      <li>Small owner-operators</li>
+						 
+                        <li>Multi-site enterprise customers</li>
+                        <li>Broker ‘re-sellers’ of services</li>
+						  <li>Different waste types and service frequencies</li>
+                       
+                  </ul>
+					
+                    <p> This avoided fragmenting the experience while still supporting highly diverse needs.</p>
+           
+					
+					<p>2. Service design before interface design, prioritising modelling backstage operations and data dependencies before finalising UI patterns. This ensured:</p>
+					 <ul class="project-bullets">
+                      <li>Interface designs were grounded in real operational constraints</li>
+						 
+                        <li>We didn’t design journeys that the business couldn’t fulfil</li>
+                        <li>Engineering teams could identify upstream system changes early</li>
+				
+                       
+                </ul>
+					<h3 class="grid-subhead"><strong>Delivery &amp; Cross-functional Leadership</strong></h3>
+                <p>Working closely with Product, Engineering and Delivery leads, I:</p>
+					 <ul class="project-bullets">
+                      <li>Shaped a multi-year roadmap aligned to both commercial targets and operational readiness</li>
+						 
+                        <li>Facilitated senior stakeholder workshops to align on scope, sequencing and risk appetite</li>
+                        <li>Coached a team of designers across parallel workstreams, introducing shared rituals, critique sessions and review standards to maintain quality and consistency</li>
+                        <li>Acted as a buffer between design teams and a highly complex stakeholder environment, allowing designers to stay focused on agreed outcomes while I managed competing business pressures</li>
+                        
+                       <li>Stepped in hands-on to solve critical design challenges where they were blocking delivery, particularly around complex service configuration, pricing transparency and contract changes.</li>
+				
+                       
+                  </ul>
+					
+					<h3 class="grid-subhead"><strong>The Products</strong></h3>
+                <p>The programme delivered a connected ecosystem of products, including:</p>
+					 <ul class="project-bullets">
+                      <li>An SME eCommerce platform allowing customers to contract and start a waste service entirely online (an industry first)</li>
+						 
+                        <li>A self-serve customer portal enabling all customer types to manage contracts, collections, invoices and service changes</li>
+                        <li> Modular design system supporting consistent delivery across multiple product teams</li>
+                        
+				
+                       
+                </ul>
+					
+					
+				<h3 class="grid-subhead"><strong>Outcomes &amp; Impact</strong></h3>
+				   <ul class="project-bullets">
+                     <li>61% increase in SME sales, significantly exceeding targets</li>
+						 
+                      <li>38% reduction in service desk calls, lowering operational costs</li>
+                      <li> Faster service onboarding times from 5 days to under 15 minutes with fewer manual processing errors.</li>
+					   <li> A measurable cultural shift toward customer-centred decision making, driven by visible commercial impact</li>
+                        
+				
+                       
+                </ul>
+                   
+              </div>
+
+                <div class="expanded-media-grid grid grid-cols-1 md:grid-cols-2 gap-5 mt-12">
+                  <div><div class="detail-img-wrapper"><img src="assets/biffa/ldropdown-01.png"></div>
+                    <p class="grid-text">The solution enabled self-serve across contracting, onbooarding, and ongoing service management.</p>
+                    </div>
+                    <div><div class="detail-img-wrapper"><img src="assets/biffa/ldropdown-02.png"></div>
+                    <p class="grid-text">A modular framework enabled interfaces to serve highly diverse customer needs.</p></div>
+                </div>
+                <div class="expanded-media-grid grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
+                    <div><div class="detail-img-wrapper"><img src="assets/biffa/dropdown-01.png"></div><p class="grid-text">Call listening at Biffa HQ.</p></div>
+                    <div><div class="detail-img-wrapper"><img src="assets/biffa/dropdown-02.png"></div><p class="grid-text">Setting the product vision.</p></div>
+                    <div><div class="detail-img-wrapper"><img src="assets/biffa/dropdown-03.png"></div>
+                    <p class="grid-text">Mapping frontstage and backstage operations.</p></div>
+                </div>
+            </div>
+            <div class="bottom-button-wrap"></div>
+        </div>
+    </div>
+</section>
+
+<section class="border-b border-custom-black project-section">
+    <div class="max-w-7xl mx-auto px-8 section-buffer flex flex-col gap-[20px]">
+        <div class="title-container-wide pt-[20px] mb-[30px] md:mb-[45px] reveal">
+            <h2 class="title-large">First Bus. Designing the future of travel for millions of customers.</h2>
+        </div>
+        <div class="gallery-container relative reveal accordion-trigger"><img src="assets/firstbus/image-01.png"></div>
+        <div class="reveal">
+             <div class="title-container-wide mt-3 body-copy scroll-anchor">
+                <p>First Bus was shifting from a business model focused primarily on operational efficiency toward one centred on revenue growth and customer experience. The business was planning major investment in technology and data, but lacked a coherent vision for how digital products, offline touchpoints, and operational change would work together to achieve its commercial goals.<br>
+                  <br>
+                I led experience and design strategy within a cross-functional team to define the long-term vision, shape the product roadmap, and support the business case for transformation.</p>
+            </div>
+            <div class="button-container"><button class="pill-button accordion-toggle">Read the case study</button></div>
+            <div class="accordion-content">
+              <div class="title-container-wide mt-6 body-copy space-y-paragraph">
+                <h3 class="grid-subhead" style="margin-top: 0;"><strong>The Challenge</strong></h3>
+                    <p>First Bus’s customer experience was fragmented across multiple digital products, physical touchpoints, and regional operating models. Key issues included:</p>
+					<ul class="project-bullets">
+                      <li>Inconsistent journey experiences across regions</li>
+                        <li>Poor orchestration between digital and offline touchpoints</li>
+                        <li>Limited personalisation and customer insight</li>
+                        <li>Revenue opportunities being constrained by operational silos</li>
+						<li>No shared view of the end-to-end customer journey</li>
+                </ul>
+					<p>At the same time, the organisation was preparing for a large-scale transformation investment, and senior leadership needed a credible, evidence-led vision to justify funding and align regional stakeholders.</p>
+                    
+                    <h3 class="grid-subhead"><strong>My Role</strong></h3>
+					<p>I was responsible for:</p>
+                    <ul class="project-bullets">
+                      <li>Leading experience strategy and product vision development</li>
+                        <li>Running discovery and research to inform strategic direction</li>
+                        <li>Facilitating cross-functional alignment across product, engineering, data, and operations</li>
+                        <li>Designing future-state journeys and ecosystem concepts</li>
+                        <li>Supporting the business case for transformation at executive level</li>
+                        
+						
+                </ul>
+
+                    <h3 class="grid-subhead"><strong>Discovery & Strategy</strong></h3>
+                    <p>I led a structured discovery phase combining:</p>
+					 <ul class="project-bullets">
+                      <li>Stakeholder interviews across operations, regional leadership, marketing, data and IT</li>
+                        <li>Customer research to understand behavioural patterns, pain points and revenue blockers</li>
+                        <li>Current-state journey mapping to expose fragmentation and duplication</li>
+                        <li>Working with engineering and data leads to identify data and integration gaps</li>
+                       
+                </ul>
+					 <p>This work surfaced a set of critical insights:</p>
+					 <ul class="project-bullets">
+                      <li>Customers struggled to navigate fragmented ticketing and account experiences</li>
+                        <li>Lack of joined-up data limited personalisation and loyalty opportunities</li>
+                        <li>Regional operating differences were preventing consistent product delivery</li>
+                        <li>Revenue growth depended on better orchestration of digital and offline moments</li>
+                       
+                </ul>
+					 <p>Using these insights, I led the creation of:</p>
+					 <ul class="project-bullets">
+                      <li>A future-state end-to-end customer journey</li>
+						 
+                        <li>An ecosystem vision showing how apps, websites, on-bus experiences and customer service would work together</li>
+                        <li>A set of experience principles aligned to revenue and growth goals<br>
+                        </li>
+                        
+                       
+                </ul>
+					<p>These artefacts formed the backbone of the strategic roadmap and business case.</p>
+					
+
+
+                <h3 class="grid-subhead"><strong>Key Product Decisions</strong></h3>
+                  
+					<p>1. Journey-first planning over feature-first delivery.</p>
+					<p>Rather than developing a roadmap based on individual product features, I advocated for designing the full end-to-end journey first. This allowed us to:</p>
+					 <ul class="project-bullets">
+                      <li>Identify the most commercially impactful moments</li>
+						 
+                        <li>Ensure future work would not be duplicated across product teams</li>
+                        <li>Plan a roadmap around customer value, not technical convenience</li>
+                       
+                </ul>
+
+					
+					<p>2. Regional flexibility within a national framework.</p>
+					<p>We developed frameworks that could support regional variation without fragmenting the product. This meant:</p>
+					 <ul class="project-bullets">
+                      <li>Standardising information architecture and data models</li>
+						 
+                        <li>Allowing controlled variation for local needs</li>
+                        <li>Avoiding a one-size-fits-all rollout that would fail regionally</li>
+						  
+                       
+                </ul>
+					
+                    <p> This avoided fragmenting the experience while still supporting highly diverse needs.</p>
+           
+					
+					<p>2. Tangible concepts to unlock stakeholder buy-in.</p>
+					<p>Instead of relying solely on strategy decks, I pushed for:</p>
+					 <ul class="project-bullets">
+                      <li>High-fidelity journey concepts</li>
+						 
+                        <li>Data-enabled and technically validated experience scenarios</li>
+                     
+				
+                       
+                </ul>
+					<h3 class="grid-subhead"><strong>Delivery &amp; Cross-functional Leadership</strong></h3>
+                <p>Working closely with Product and Engineering leads, I:</p>
+					 <ul class="project-bullets">
+                      <li>Shaped a transformation roadmap aligned to commercial and operational goals</li>
+						 
+                        <li>Facilitated co-design workshops with design, product, engineering and customer service teams</li>
+                        <li>Mediated competing priorities between regional leadership and central product teams</li>
+                        <li>Ensured design concepts were technically validated and operationally viable</li>
+                        
+				
+                       
+                </ul>
+					
+					<h3 class="grid-subhead"><strong>Outcomes &amp; Impact</strong></h3>
+                
+					 <ul class="project-bullets">
+                      <li>Directly informed a multi-million-pound transformation investment now in delivery</li>
+						 
+                        <li>Established a clear blueprint for digital product delivery and operational change</li>
+                        <li> Aligned regional and central teams around a shared customer vision</li>
+                        
+				   <li>Identified new revenue growth opportunities tied to loyalty and personalisation</li>
+                        <li> Helped to shift leadership mindset from operational efficiency to experience-led growth</li>
+                       
+                </ul>
+			
+                   
+              </div>
+
+              <div class="expanded-media-grid grid grid-cols-1 md:grid-cols-2 gap-5 mt-12">
+                    <div><div class="detail-img-wrapper"><img src="assets/firstbus/dropdown-01.png"></div>
+                    <p class="grid-text">Products served highly diverse customer types from a single modular framework</p></div>
+                    <div><div class="detail-img-wrapper"><img src="assets/firstbus/dropdown-02.png"></div>
+                    <p class="grid-text">The solution enabled self-serve across contracting, onabroding and ongoing service management.</p></div>
+				  <div><div class="detail-img-wrapper"><img src="assets/firstbus/dropdown-03.png"></div>
+                    <p class="grid-text">Products served highly diverse customer types from a single modular framework</p></div>
+                    <div><div class="detail-img-wrapper"><img src="assets/firstbus/dropdown-04.png"></div>
+                    <p class="grid-text">The solution enabled self-serve across contracting, onabroding and ongoing service management.</p></div>
+                </div>
+            </div>
+            <div class="bottom-button-wrap"></div>
+        </div>
+    </div>
+</section>
+
+<section class="border-b border-custom-black project-section">
+    <div class="max-w-7xl mx-auto px-8 section-buffer flex flex-col gap-[20px]">
+        <div class="title-container-wide pt-[20px] mb-[30px] md:mb-[45px] reveal">
+            <h2 class="title-large">Speedy Hire. Design-led eCommerce and service transformation.</h2>
+        </div>
+        <div class="gallery-container relative reveal accordion-trigger"><img src="assets/speedy/hero-01.png"></div>
+        <div class="reveal">
+            <div class="title-container-wide mt-3 body-copy scroll-anchor">
+                <p>Speedy Hire, the UK’s largest equipment hire provider, was undertaking a multi-year programme to transform its eCommerce experience across web, app and point of sale. This was enabled by major investment in logistics, data and operational change, but early delivery lacked a unifying product vision.<br>
+                  <br>
+                I led product strategy and design teams across the programme, ensuring delivery stayed aligned to customer outcomes rather than short-term system constraints.</p>
+            </div>
+            <div class="button-container"><button class="pill-button accordion-toggle">Read the case study</button></div>
+            <div class="accordion-content">
+              <div class="title-container-wide mt-6 body-copy space-y-paragraph">
+                <h3 class="grid-subhead" style="margin-top: 0;"><strong>The Challenge</strong></h3>
+                    <p>The existing eCommerce experience was built on legacy systems with a deeply flawed product taxonomy and fragmented user journeys. This resulted in:</p>
+					<ul class="project-bullets">
+                      <li>Low product discoverability</li>
+                        <li>High search failure rates</li>
+                        <li>Confusing navigation for trade and retail customers</li>
+                        <li>Critical early system decisions being made in isolation</li>
+						<li>Teams delivering features that compounded structural problems</li>
+                </ul>
+					<p>Without intervention, the programme risked scaling a broken experience on top of new infrastructure.</p>
+                    
+                    <h3 class="grid-subhead"><strong>My Role</strong></h3>
+					<p>I was responsible for:</p>
+                    <ul class="project-bullets">
+                      <li>Defining the long-term experience vision</li>
+                        <li>Leading service design and journey mapping</li>
+                        <li>Coaching design teams across web, app and POS</li>
+                        <li>Partnering with Product and Engineering on roadmap sequencing</li>
+                        <li>Advocating for structural fixes over superficial UI improvements</li>
+                        <li>Establishing a scalable design system</li>
+						
+                </ul>
+
+                    <h3 class="grid-subhead"><strong>Discovery & Strategy</strong></h3>
+                    <p>I led a cross-functional discovery phase that included:</p>
+					 <ul class="project-bullets">
+                      <li>Current-state journey mapping workshops</li>
+                        <li>User testing to identify navigation and discovery failures</li>
+                        <li>Search analytics and keyword data analysis</li>
+                        <li>Competitor benchmarking of taxonomy models</li>
+                       
+                </ul>
+					 <p>This revealed that:</p>
+					 <ul class="project-bullets">
+                      <li>The existing product taxonomy was fundamentally misaligned with customer intent</li>
+                        <li>Search and navigation issues were structural, not cosmetic</li>
+                        <li>Early platform decisions would lock in long-term failure if not corrected</li>
+                       
+                       
+                </ul>
+			    <h3 class="grid-subhead"><strong>Key Product Decisions & Trade-offs</strong></h3>
+                  
+					<p>1. Rebuilding the taxonomy before scaling infrastructure</p>
+					<p>I challenged the assumption that we should proceed with platform development before fixing the taxonomy. Instead, I proposed:</p>
+					 <ul class="project-bullets">
+                      <li>A full redesign of the product classification model</li>
+						 
+                        <li>Alignment of taxonomy to customer mental models</li>
+                        <li>Tree testing to validate findability improvements</li>
+                       
+                </ul>
+					
+                    <p> This delayed some platform work but prevented long-term compounding failure.</p>
+					
+					<p>2. Evidence-led influence over delivery pressure</p>
+					<p>User testing revealed critical discovery failures. I brought these findings to Product and Engineering leadership and made the case for rework despite timeline pressure.</p>
+					<p>This required trading short-term delivery speed for long-term product viability.</p>
+				
+				 
+					
+                <p> This avoided fragmenting the experience while still supporting highly diverse needs.</p>
+           
+					
+					<p>3. Service design before interface polish:</p>
+					<p>I modelled user flows and backstage operations to surface:</p>
+					 <ul class="project-bullets">
+                      <li>Business rules adding unnecessary friction</li>
+						 
+                        <li>Risk management constraints blocking simple journeys</li>
+                        <li>Opportunities to simplify account management and pricing logic</li>
+				
+                       
+                </ul>
+					<h3 class="grid-subhead"><strong>Delivery &amp; Cross-functional Leadership</strong></h3>
+                <p>Across the programme, I:</p>
+					 <ul class="project-bullets">
+                      <li>Coached designers embedded within delivery teams</li>
+						 
+                        <li>Introduced shared critique and review standards</li>
+                        <li>Mediated conflicts between delivery speed and product quality</li>
+                        <li>Presented strategic trade-offs to senior stakeholders</li>
+                        <li>Established a design system to ensure consistency at scale</li>
+                       <li>Stepped in hands-on to prototype and test critical flows where they were blocking progress.</li>
+				
+                       
+                </ul>
+					
+					
+					
+					
+				<h3 class="grid-subhead"><strong>Outcomes &amp; Impact</strong></h3>
+				   <ul class="project-bullets">
+                     <li>Prevented a flawed taxonomy from being locked into new infrastructure</li>
+						 
+                      <li>Significantly improved product discoverability and reduced search failure in early testing.</li>
+                      <li>Created a scalable design system adopted across teams</li>
+					   <li>Helped to establish clearer customer account structures</li>
+					    <li>Changed critical business rules while maintaining acceptable risk levels.</li>
+					   <li>Established a clear, journey-led roadmap for future delivery</li>
+                        
+				
+                       
+                </ul>
+				  <p>The programme is ongoing, with first major launch scheduled FY2026.</p>
+                   
+              </div>
+
+             <div class="expanded-media-grid grid grid-cols-1 md:grid-cols-2 gap-5 mt-12">
+                  <div><div class="detail-img-wrapper"><img src="assets/speedy/image-01.png"></div>
+                    <p class="grid-text">The new product taxonomy unlocked design opportunities for discoverability and search for different customer types.</p>
+                    </div>
+                    <div><div class="detail-img-wrapper"><img src="assets/speedy/image-02.png"></div>
+                    <p class="grid-text">The design system supported desingers in tackling challenges consistently and with clear guardrails.</p></div>
+                </div>
+                <div class="expanded-media-grid grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
+                    <div><div class="detail-img-wrapper"><img src="assets/speedy/dropdown-01.png"></div>
+                    <p class="grid-text">Detail of the customer journey map.</p></div>
+                    <div><div class="detail-img-wrapper"><img src="assets/speedy/dropdown-02.png"></div>
+                    <p class="grid-text">Modelling user flows and using prototyping to lead change of business processes</p></div>
+                    <div><div class="detail-img-wrapper"><img src="assets/speedy/dropdown-03.png"></div>
+                    <p class="grid-text">Detail of the design system documentation.</p></div>
+                </div>
+                
+            </div>
+            <div class="bottom-button-wrap"></div>
+        </div>
+    </div>
+</section>
+
+<section class="border-b border-custom-black">
+    <div class="max-w-7xl mx-auto px-8 section-buffer">
+        <div class="title-container-wide pt-[20px] mb-[80px] reveal">
+          <h2 class="title-large">Further project samples.</h2></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-12">
+             <div class="reveal"><div class="detail-img-wrapper"><img src="assets/grid/image-01.png"></div>
+             <p class="grid-text"><strong>MyEnergi</strong>. Control hub and portal for renewable home energy products.</p></div>
+            <div class="reveal"><div class="detail-img-wrapper"><img src="assets/grid/image-06.png"></div>
+            <p class="grid-text"><strong>PTSB Bank</strong>. A refreshed design system and multiple self serve tools.</p></div>
+            <div class="reveal"><div class="detail-img-wrapper"><img src="assets/grid/image-09.png"></div>
+            <p class="grid-text"><strong>Wren Kitchens</strong>. App to support customers through their kitchen design and installation.</p></div>
+			 <div class="reveal"><div class="detail-img-wrapper"><img src="assets/grid/image-11.png"></div>
+			 <p class="grid-text"><strong>iGuzzini</strong>. Moving the product catalgoue and sales process online for a lighting manfacturer.</p></div>
+            <div class="reveal"><div class="detail-img-wrapper"><img src="assets/grid/image-10.png"></div>
+            <p class="grid-text"><strong>LIV Golf</strong>. A fan engagement ecosystem for the golf league.</p></div>
+            <div class="reveal"><div class="detail-img-wrapper"><img src="assets/grid/image-04.png"></div>
+            <p class="grid-text"><strong>Manpower Group</strong>. Developing a new SaaS product for a global workforce solutions provider.</p></div>
+        </div>
+		
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-white">
+    <div class="max-w-7xl mx-auto px-8 pt-[10px] pb-12 flex flex-col md:flex-row justify-between items-start reveal">
+        <div>
+            <h1 class="title-header text-black-heading">Louis Sheppard</h1>
+            <p class="title-header">2026 Profile</p>
+        </div>
+        <p class="title-header pt-[2px] md:pt-[5px]">lwshepp@gmail.com</p>
+    </div>
+</footer>
+
+<script>
+    const lenis = new Lenis({ duration: 0.8, lerp: 0.15, smoothWheel: true });
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                const videos = entry.target.tagName === 'VIDEO' ? [entry.target] : entry.target.querySelectorAll('video');
+                videos.forEach(vid => {
+                    vid.muted = true;
+                    vid.play().catch(err => {});
+                });
+            } else {
+                const videos = entry.target.tagName === 'VIDEO' ? [entry.target] : entry.target.querySelectorAll('video');
+                videos.forEach(vid => vid.pause());
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    function toggleAccordion(section, triggerType) {
+        const content = section.querySelector('.accordion-content');
+        const button = section.querySelector('.pill-button');
+        const buttonContainer = section.querySelector('.button-container');
+        const bottomWrap = section.querySelector('.bottom-button-wrap');
+        const scrollAnchor = section.querySelector('.scroll-anchor');
+        const isOpening = !content.style.maxHeight || content.style.maxHeight === '0px';
+        
+        if (isOpening) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            button.textContent = 'Close case study';
+            bottomWrap.appendChild(button);
+            if (triggerType === 'trigger') {
+                setTimeout(() => { 
+                    lenis.scrollTo(scrollAnchor, { offset: -40, duration: 1.2 }); 
+                }, 300);
+            }
+        } else {
+            content.style.maxHeight = '0px';
+            button.textContent = 'Read the case study';
+            buttonContainer.appendChild(button);
+            lenis.scrollTo(section, { offset: -20, duration: 0.8 });
+        }
+        setTimeout(() => { lenis.resize(); }, 600);
+    }
+
+    document.querySelectorAll('.accordion-toggle').forEach(button => {
+        button.addEventListener('click', (e) => toggleAccordion(e.target.closest('.project-section'), 'button'));
+    });
+    document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+        trigger.addEventListener('click', (e) => toggleAccordion(e.target.closest('.project-section'), 'trigger'));
+    });
+</script>
+</body>
+</html>
