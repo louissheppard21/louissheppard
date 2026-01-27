@@ -661,7 +661,7 @@
                 videos.forEach(vid => vid.pause());
             }
         });
-    }, { threshold: 0.9 });
+    }, { threshold: 0.4 });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
     function toggleAccordion(section, triggerType) {
