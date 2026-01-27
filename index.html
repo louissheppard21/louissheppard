@@ -117,7 +117,7 @@
             max-width: 150px;
             width: 100%;
             margin-top: 0px;
-            margin-bottom: 200px;
+            margin-bottom: 32vh;;
             /* No mx-auto here keeps it left-aligned */
         }
 
@@ -661,7 +661,7 @@
                 videos.forEach(vid => vid.pause());
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.9 });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
     function toggleAccordion(section, triggerType) {
