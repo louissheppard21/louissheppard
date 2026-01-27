@@ -131,7 +131,7 @@
 
         /* Hover cycle image transition - Updated for gradual fade */
         .cycle-image {
-            transition: opacity 0.8s ease-in-out;
+            transition: opacity 2s ease-in-out;
         }
     </style>
     
@@ -167,23 +167,23 @@
         </div>
 
         <div class="pb-[30px] reveal">
-            <p class="title-header">Projects</p>
+            <p class="title-header">Selected case studies</p>
         </div>
     </div>
 </section>
 
 <section class="border-b border-custom-black project-section">
     <div class="max-w-7xl mx-auto px-8 section-buffer flex flex-col gap-[0px]">
-        <div class="title-container-wide pt-[20px] mb-[30px] md:mb-[45px] reveal">
+        <div class="title-container-wide pt-[0px] mb-[30px] md:mb-[45px] reveal">
             <h2 class="title-large">Biffa. End-to-end transformation of the customer experience.</h2>
         </div>
         <div class="gallery-container relative reveal accordion-trigger"><img src="assets/biffa/hero-01.png"></div>
         <div class="reveal">
-            <div class="title-container-wide mt-3 body-copy scroll-anchor">
-                <p>Biffa, a major UK waste utility provider, was embarking on a multi-year transformation to embed digital self-service across its SME and enterprise customer base. The goals were to drive revenue growth, improve customer satisfaction, and reduce reliance on manual service operations — fundamentally changing how the business delivered its service.<br>
-                  <br>
+            <div class="title-container-wide mt-8 body-copy scroll-anchor">
+              <p>Biffa, a major UK waste utility provider, was embarking on a multi-year transformation to embed digital self-service across its SME and enterprise customer base. The goals were to drive revenue growth, improve customer satisfaction, and reduce reliance on manual service operations — fundamentally changing how the business delivered its service.<br>
+                <br>
                 I led experience strategy and design teams across the programme, ensuring delivery stayed focused on research-driven customer outcomes aligned to commercial and operational goals.<br><br>
-</p>
+              </p>
             </div>
             <div class="button-container"><button class="pill-button accordion-toggle">Read the case study</button></div>
             <div class="accordion-content">
@@ -330,7 +330,7 @@
 
 <section class="border-b border-custom-black project-section">
     <div class="max-w-7xl mx-auto px-8 section-buffer flex flex-col gap-[20px]">
-        <div class="title-container-wide pt-[20px] mb-[30px] md:mb-[45px] reveal">
+        <div class="title-container-wide pt-[0px] mb-[30px] md:mb-[45px] reveal">
             <h2 class="title-large">First Bus. Designing the future of travel for millions of customers.</h2>
         </div>
         <div class="gallery-container relative reveal accordion-trigger"><img src="assets/firstbus/image-01.png"></div>
@@ -465,7 +465,7 @@
 
 <section class="border-b border-custom-black project-section">
     <div class="max-w-7xl mx-auto px-8 section-buffer flex flex-col gap-[20px]">
-        <div class="title-container-wide pt-[20px] mb-[30px] md:mb-[45px] reveal">
+        <div class="title-container-wide pt-[0px] mb-[30px] md:mb-[45px] reveal">
             <h2 class="title-large">Speedy Hire. Design-led eCommerce and service transformation.</h2>
         </div>
         <div class="gallery-container relative reveal accordion-trigger"><img src="assets/speedy/hero-01.png"></div>
@@ -599,8 +599,8 @@
 
 <section class="border-b border-custom-black">
     <div class="max-w-7xl mx-auto px-8 section-buffer">
-        <div class="title-container-wide pt-[20px] mb-[80px] reveal">
-          <h2 class="title-large">Further project samples.</h2></div>
+        <div class="title-container-wide pt-[0px] mb-[80px] reveal">
+          <h2 class="title-large">Further project examples.</h2></div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-12">
              <div class="reveal project-hover-node" data-images='["assets/grid/pt-01.png", "assets/grid/pt-02.png", "assets/grid/pt-03.png"]'>
                 <div class="detail-img-wrapper"><img src="assets/grid/pt-01.png" class="cycle-image"></div>
@@ -620,7 +620,7 @@
              </div>
             <div class="reveal project-hover-node" data-images='["assets/grid/liv-01.png", "assets/grid/liv-02.png", "assets/grid/liv-03.png"]'>
                 <div class="detail-img-wrapper"><img src="assets/grid/liv-01.png" class="cycle-image"></div>
-                <p class="grid-text"><strong>LIV Golf</strong>. A fan engagement ecosystem for the golf league.</p>
+                <p class="grid-text"><strong>LIV Golf</strong>. A fan engagement ecosystem covering ticketing, streaming, league scoring, fantasy, store, and live event coverage.</p>
             </div>
             <div class="reveal project-hover-node" data-images='["assets/grid/qd-01.png", "assets/grid/qd-02.png", "assets/grid/qd-03.png"]'>
                 <div class="detail-img-wrapper"><img src="assets/grid/qd-01.png" class="cycle-image"></div>
@@ -728,7 +728,7 @@
             interval = setInterval(() => {
                 currentIndex = (currentIndex + 1) % images.length;
                 updateImage();
-            }, 600);
+            }, 800);
         });
 
         node.addEventListener('mouseleave', () => {
