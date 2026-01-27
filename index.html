@@ -128,6 +128,11 @@
             overflow: hidden;
             background-color: #f5f5f5;
         }
+
+        /* Hover cycle image transition - Updated for gradual fade */
+        .cycle-image {
+            transition: opacity 0.8s ease-in-out;
+        }
     </style>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -150,8 +155,8 @@
 
 <section class="border-b border-custom-black">
     <div class="max-w-7xl mx-auto px-8 pt-[20px]">
-        <div class="title-container-wide mb-[5vh] lg:mb-[5vh] reveal">
-            <h2 class="title-large">I use systems thinking, strategy and hands on-execution to lead design teams in shaping new product experiences.</h2>
+        <div class="title-container-wide mb-[30px] lg:mb-[30px] reveal">
+            <h2 class="title-large">I use design, product strategy and systems thinking to lead teams in shaping and shipping new product experiences.</h2>
         </div>
 
         <div class="intro-image-container reveal">
@@ -596,18 +601,30 @@
         <div class="title-container-wide pt-[20px] mb-[80px] reveal">
           <h2 class="title-large">Further project samples.</h2></div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-12">
-             <div class="reveal"><div class="detail-img-wrapper"><img src="assets/grid/image-01.png"></div>
-             <p class="grid-text"><strong>MyEnergi</strong>. Control hub and portal for renewable home energy products.</p></div>
-            <div class="reveal"><div class="detail-img-wrapper"><img src="assets/grid/image-06.png"></div>
-            <p class="grid-text"><strong>PTSB Bank</strong>. A refreshed design system and multiple self serve tools.</p></div>
-            <div class="reveal"><div class="detail-img-wrapper"><img src="assets/grid/image-09.png"></div>
-            <p class="grid-text"><strong>Wren Kitchens</strong>. App to support customers through their kitchen design and installation.</p></div>
-			 <div class="reveal"><div class="detail-img-wrapper"><img src="assets/grid/image-11.png"></div>
-			 <p class="grid-text"><strong>iGuzzini</strong>. Moving the product catalgoue and sales process online for a lighting manfacturer.</p></div>
-            <div class="reveal"><div class="detail-img-wrapper"><img src="assets/grid/image-10.png"></div>
-            <p class="grid-text"><strong>LIV Golf</strong>. A fan engagement ecosystem for the golf league.</p></div>
-            <div class="reveal"><div class="detail-img-wrapper"><img src="assets/grid/image-04.png"></div>
-            <p class="grid-text"><strong>Manpower Group</strong>. Developing a new SaaS product for a global workforce solutions provider.</p></div>
+             <div class="reveal project-hover-node" data-images='["assets/grid/pt-01.png", "assets/grid/pt-02.png", "assets/grid/pt-03.png"]'>
+                <div class="detail-img-wrapper"><img src="assets/grid/pt-01.png" class="cycle-image"></div>
+                <p class="grid-text"><strong>PTSB Bank</strong>. A refreshed design system and multiple self serve tools.</p>
+             </div>
+            <div class="reveal project-hover-node" data-images='["assets/grid/me-01.png", "assets/grid/me-02.png", "assets/grid/me-03.png"]'>
+                <div class="detail-img-wrapper"><img src="assets/grid/me-01.png" class="cycle-image"></div>
+                <p class="grid-text"><strong>MyEnergi</strong>. Control hub and portal for renewable home energy products.</p>
+            </div>
+            <div class="reveal project-hover-node" data-images='["assets/grid/wren-01.png", "assets/grid/wren-02.png", "assets/grid/wren-03.png"]'>
+                <div class="detail-img-wrapper"><img src="assets/grid/wren-01.png" class="cycle-image"></div>
+                <p class="grid-text"><strong>Wren Kitchens</strong>. App to support customers through their kitchen design and installation.</p>
+            </div>
+			 <div class="reveal project-hover-node" data-images='["assets/grid/ig-01.png", "assets/grid/ig-02.png", "assets/grid/ig-03.png"]'>
+                <div class="detail-img-wrapper"><img src="assets/grid/ig-01.png" class="cycle-image"></div>
+			    <p class="grid-text"><strong>iGuzzini</strong>. Moving the product catalgoue and sales process online for a lighting manfacturer.</p>
+             </div>
+            <div class="reveal project-hover-node" data-images='["assets/grid/liv-01.png", "assets/grid/liv-02.png", "assets/grid/liv-03.png"]'>
+                <div class="detail-img-wrapper"><img src="assets/grid/liv-01.png" class="cycle-image"></div>
+                <p class="grid-text"><strong>LIV Golf</strong>. A fan engagement ecosystem for the golf league.</p>
+            </div>
+            <div class="reveal project-hover-node" data-images='["assets/grid/qd-01.png", "assets/grid/qd-02.png", "assets/grid/qd-03.png"]'>
+                <div class="detail-img-wrapper"><img src="assets/grid/qd-01.png" class="cycle-image"></div>
+                <p class="grid-text"><strong>Qdos</strong>. Developing a new brand and product experience for an insurance provider.</p>
+            </div>
         </div>
 		
     </div>
@@ -678,6 +695,47 @@
     });
     document.querySelectorAll('.accordion-trigger').forEach(trigger => {
         trigger.addEventListener('click', (e) => toggleAccordion(e.target.closest('.project-section'), 'trigger'));
+    });
+
+    // UPDATED HOVER CYCLE LOGIC: Quicker cycle, immediate start, gradual fade
+    document.querySelectorAll('.project-hover-node').forEach(node => {
+        let interval;
+        let currentIndex = 0;
+        const imgElement = node.querySelector('.cycle-image');
+        const images = JSON.parse(node.dataset.images);
+
+        // Preload
+        images.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+
+        const updateImage = () => {
+            imgElement.style.opacity = 0;
+            setTimeout(() => {
+                imgElement.src = images[currentIndex];
+                imgElement.style.opacity = 1;
+            }, 150); // Small delay to let fade-out begin
+        };
+
+        node.addEventListener('mouseenter', () => {
+            // Immediate change to the second image
+            currentIndex = (currentIndex + 1) % images.length;
+            updateImage();
+
+            // Start cycle at 1200ms
+            interval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateImage();
+            }, 600);
+        });
+
+        node.addEventListener('mouseleave', () => {
+            clearInterval(interval);
+            currentIndex = 0;
+            imgElement.src = images[0];
+            imgElement.style.opacity = 1;
+        });
     });
 </script>
 </body>
