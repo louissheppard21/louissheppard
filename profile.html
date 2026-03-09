@@ -269,7 +269,7 @@ body.dark-mode .section-marker {
         .carousel-image:hover .carousel-next-circle { transform: translate(30%, 50%) translateY(0); }
         .carousel-meta { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; margin-top: 18px; }
         .carousel-counter { font-size: 16px; min-width: 60px; }
-        .carousel-desc { flex: 1; font-size: 16px; }
+        .carousel-desc { flex: 1; font-size: 20px; }
         .carousel-controls { display: flex; gap: 12px; }
         .carousel-arrow { width: 42px; height: 42px; border-radius: 9999px; border: 1px solid #000; background: transparent; cursor: pointer; transition: opacity 0.3s ease; }
         .carousel-arrow img { width: 100%; height: auto; }
@@ -486,7 +486,7 @@ body.dark-mode .at-a-glance-list li::before {
     </div>
 </div>
 
-<section class="project-section">
+<section id="biffa-section" class="project-section">
     <div class="max-w-7xl mx-auto px-8">
 		
 		<div class="border-b border-custom-black section-buffer flex flex-col gap-[0px] pt-[6px]">
@@ -569,7 +569,7 @@ body.dark-mode .at-a-glance-list li::before {
 
                     <h3 class="grid-subhead">Research & Strategy</h3>
                         <p>I ran a research programme combining SME and enterprise customer interviews, surveys, service desk call listening, analysis of existing digital journeys and stakeholder interviews.</p>
-                        <p>While customer needs varied,  consistent patterns emerged. Customers expected waste services to operate largely in the background of their business. The relationship with Biffa only became visible when something went wrong. Poor communication and limited service visibility amplified frustration and focused attention on these negative moments.</p>
+                        <p>While customer needs varied,  consistent patterns emerged. Customers expected waste services to operate in the background of their business. The relationship with Biffa only became visible when something went wrong. Poor communication and limited service visibility amplified frustration and focused attention on these negative moments.</p>
                         <p>Research also revealed widespread misconceptions about waste processing and environmental impact, particularly among SME customers. Incorrect service configuration during onboarding was common and often resulted in unexpected charges and contract changes, damaging trust early in the relationship.</p>
                         <p>These insights highlighted an opportunity to shift the experience away from reactive issue management toward clearer communication, proactive visibility and stronger customer confidence.</p>
                         <p>Working with product leadership, I translated customer insights into roadmap priorities and established a KPI framework to guide product development decisions. I also developed a product vision and experience strategy, presenting this to executive stakeholders to secure sponsorship.</p>
@@ -585,7 +585,7 @@ body.dark-mode .at-a-glance-list li::before {
                             <li>Phase 2: Core self-serve account management</li>
                             <li>Phase 3: Enterprise tooling and complex service changes					</li>
                       </ul>
-                    <p>This allowed the organisation to validate digital adoption with SME customers before expanding into more complex enterprise scenarios.</p>
+                    <p>This allowed the organisation to validate digital adoption with SME customers before expanding into more complex areas.</p>
                     <p><strong>Adaptive experience framework</strong></p>
                     <p>The platform needed to support customers ranging from single-site SMEs to enterprise organisations managing large service estates. I oversaw the creation of a modular design system and interaction framework that allowed interfaces to adapt to the scale and complexity of customer data.</p>
                         <p><strong>Designing for imperfect operational data</strong><br>
@@ -1132,10 +1132,10 @@ Throughout delivery I supported my team by unblocking challenges and contributin
 									 <div class="carousel-slide" data-desc="We established a comprehensive design system to support scale across teams. I defined initial foundations and governance, then expanded the system through structured cross-functional contributions. Ongoing oversight ensured adoption and strategic value.">
                                         <div class="carousel-image"><img src="assets/speedy/04.png"><div class="carousel-next-overlay"><div class="carousel-next-circle">Next</div></div></div>
                                     </div>
-								  <div class="carousel-slide" data-desc="At the outset there was misalignment across product and engineering reams for how interconnected workstreams would come together to achieve customer outcomes. I ran workshops to map the current state journey and build consensus on where the critical challenges were. From view then creating a future state journey for each customer type to plan design activities, align teams, set product boundaries, and enable delivery to be sequenced in line with delivering customer and business value.">
+								  <div class="carousel-slide" data-desc="Ahead of design I defined a product vision and strategy. This consolidated early research and identified themes for exploration. A KPI tree mapped metrics to organisational goals and ensured all subsequent design activity was tracked to a specific metric.">
                                         <div class="carousel-image"><img src="assets/speedy/05.png"><div class="carousel-next-overlay"><div class="carousel-next-circle">Next</div></div></div>
                                     </div>
-								  <div class="carousel-slide" data-desc="Ahead of design beginning I defined a product vision and strategy. This consolidated early research and identified key themes for exploration. The strategy included a KPI tree mapping metrics to organisational goals. I ensured all subsequent design activity tracked to a specific metric and that there was continuous visibility of where design was supporting the strategic aims of the business.">
+								  <div class="carousel-slide" data-desc="At the outset there was misalignment across product and engineering reams for how interconnected workstreams would come together to achieve customer outcomes. I created future-state customer journey maps to visualise this and enable us to align teams.">
                                         <div class="carousel-image"><img src="assets/speedy/06.png"><div class="carousel-next-overlay"><div class="carousel-next-circle">Next</div></div></div>
                                     </div>
 									 <div class="carousel-slide" data-desc="We mapped user flows to expose where business rules were driving friction, challenging assumptions that UI alone would solve abandonment. Prototypes modelled improved processes, enabling collaboration with business leadership to evolve business rules and balance risk with performance.">
@@ -1319,24 +1319,17 @@ Throughout delivery I supported my team by unblocking challenges and contributin
     // Dynamic Theme Manager
     function updateTheme() {
         const scrollY = window.scrollY;
-        const introPrinciplesSection = document.getElementById('intro-principles-section');
+        const biffaSection = document.getElementById('biffa-section');
         const contactSection = document.getElementById('contact-section');
 
-        if (!introPrinciplesSection || !contactSection) return;
+        if (!biffaSection || !contactSection) return;
 
-        // Settings
         const topThreshold = 100;
-
-        // Keep dark mode active through the intro principles section
-        const introBottom = introPrinciplesSection.offsetTop + introPrinciplesSection.offsetHeight;
-        const introFadeTrigger = introBottom - (window.innerHeight * 0.55);
-
-        // Bring dark mode back near the closing principles section
-        const contactTop = contactSection.offsetTop;
-        const contactTrigger = contactTop - (window.innerHeight * 0.6);
+        const biffaTrigger = biffaSection.offsetTop - (window.innerHeight * 0.6);
+        const contactTrigger = contactSection.offsetTop - (window.innerHeight * 0.6);
 
         const isAtTop = scrollY < topThreshold;
-        const isBeforeBiffa = scrollY < introFadeTrigger;
+        const isBeforeBiffa = scrollY < biffaTrigger;
         const isAtBottom = scrollY > contactTrigger;
 
         if (isAtTop || isBeforeBiffa || isAtBottom) {
